@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mister Duas Rodas</title>
+  <meta name="theme-color" content="#f2f2f2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Favicon padrão -->
+<link rel="icon" href="assets/img/favicon.ico" />
+
+<!-- PNGs -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+<!-- iPhone / iPad -->
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="assets/img/site.webmanifest">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header id="top">
+    <nav class="navbar">
+      <a href="#home" class="nav-logo" aria-label="Voltar para a tela inicial">
+        <img src="assets/logos-tuba/mister.png" alt="Logo Mister Duas Rodas" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#lojas" class="nav-link">Lojas</a></li>
+        <li><a href="#redes" class="nav-link">Redes Sociais</a></li>
+        <li><a href="#sites" class="nav-link">Sites</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-flare hero-flare--left"></div>
+    <div class="hero-flare hero-flare--right"></div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title">
+        <span>MISTER</span>
+        <span class="accent">DUAS RODAS</span>
+      </h1>
+      <p class="hero-subtitle">Peças técnicas e remap para quem busca resultado.</p>
+      <div class="hero-cta-group">
+        <a href="#lojas" class="btn btn--primary">Ver Lojas <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="#contato" class="btn btn--ghost">Falar Conosco</a>
+      </div>
+    </div>
+    <div class="hero-badge reveal-delay">
+     
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PESQUISA -->
+  <section class="search-section reveal" id="busca">
+    <div class="container">
+      <div class="section-label"><i class="fa-solid fa-magnifying-glass"></i> Busca Rápida</div>
+      <h2 class="section-title">Encontre seu produto</h2>
+      <p class="section-sub">Digite o produto e escolha onde deseja pesquisar</p>
+      <div class="search-box">
+        <div class="search-input-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon-input"></i>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Ex: pastilha de freio, filtro de ar, capacete..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="search-buttons">
+          <button class="btn btn--shopee" onclick="searchStore('shopee')">
+            <img src="assets/logos-tuba/logo shopee p.png" alt="Shopee" class="btn-logo btn-logo--shopee"> Pesquisar na Shopee
+          </button>
+          <button class="btn btn--ml" onclick="searchStore('ml')">
+            <img src="assets/logos-tuba/logo ML p.png" alt="Mercado Livre" class="btn-logo btn-logo--ml"> Pesquisar no Mercado Livre
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOJAS -->
+  <section class="stores-section reveal" id="lojas">
+    <div class="container">
+      <div class="section-label"><i class="fa-solid fa-store"></i> Marketplace</div>
+      <h2 class="section-title">Nossas Lojas</h2>
+      <p class="section-sub">Acesse nossas lojas oficiais e garanta qualidade com segurança</p>
+      <div class="cards-grid">
+        <div class="store-card reveal-card">
+          <div class="card-glow card-glow--orange"></div>
+          <div class="card-icon-wrap">
+            <div class="card-icon card-icon--marketplace">
+              <img src="assets/logos-tuba/logo shopee l.png" alt="Logo Shopee" class="store-logo store-logo--shopee">
+            </div>
+          </div>
+          <p class="card-desc">Peças, acessórios e muito mais com entrega rápida e segurança Shopee.</p>
+          <div class="card-badges">
+            <span class="badge-tag">Segurança</span>
+            <span class="badge-tag">Garantia</span>
+          </div>
+          <a href="https://shopee.com.br/shop/463402988" target="_blank" class="btn btn--primary btn--full">
+            Acessar Loja <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        <div class="store-card reveal-card">
+          <div class="card-glow card-glow--yellow"></div>
+          <div class="card-icon-wrap">
+            <div class="card-icon card-icon--marketplace">
+              <img src="assets/logos-tuba/logo ML l.png" alt="Logo Mercado Livre" class="store-logo store-logo--ml">
+            </div>
+          </div>
+          
+          <p class="card-desc">Compre com segurança pelo maior marketplace da América Latina.</p>
+          <div class="card-badges">
+            <span class="badge-tag">Full</span>
+            <span class="badge-tag">Reputação Oficial</span>
+          </div>
+          <a href="https://www.mercadolivre.com.br/loja/mister-duas-rodas" target="_blank" class="btn btn--primary btn--full">
+            Acessar Loja <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="store-card reveal-card">
+          <div class="card-glow card-glow--red"></div>
+          <div class="card-icon-wrap">
+            <div class="card-icon card-icon--dual-logo tuba-dual-logo">
+              <img src="assets/logos-tuba/tuba motors 1.png" alt="Logo Tuba Racing" class="store-logo store-logo--racing">
+              <span class="logo-separator">&amp;</span>
+              <img src="assets/logos-tuba/psbk logo.jpg" alt="Logo Tuba Motors" class="store-logo store-logo--motors">
+            </div>
+          </div>
+          <h3 class="card-title">Tuba Motors</h3>
+          <p class="card-desc">Preparação e Remap.</p>
+          <div class="card-badges">
+            <span class="badge-tag">Em breve</span>
+          </div>
+          <button class="btn btn--ghost btn--full" disabled>
+            Em Breve <i class="fa-solid fa-clock"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REDES SOCIAIS -->
+  <section class="social-section reveal" id="redes">
+    <div class="container">
+      <div class="section-label"><i class="fa-solid fa-share-nodes"></i> Siga a gente</div>
+      <h2 class="section-title">Redes Sociais</h2>
+      <p class="section-sub">Fique por dentro das novidades, promoções e lançamentos</p>
+      <div class="social-grid">
+
+        <a href="https://www.facebook.com/tuba.motors" target="_blank" class="social-card social-card--fb reveal-card">
+          <div class="social-glow"></div>
+          <div class="social-icon-wrap"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="social-info">
+            <span class="social-name">Tuba Motors</span>
+            <span class="social-handle">facebook.com/tuba.motors</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+        </a>
+
+        <a href="https://www.facebook.com/misterduasrodas" target="_blank" class="social-card social-card--fb reveal-card">
+          <div class="social-glow"></div>
+          <div class="social-icon-wrap"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="social-info">
+            <span class="social-name">Mister Duas Rodas</span>
+            <span class="social-handle">facebook.com/misterduasrodas</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+        </a>
+
+        <a href="https://www.instagram.com/mister2rodas" target="_blank" class="social-card social-card--ig reveal-card">
+          <div class="social-glow"></div>
+          <div class="social-icon-wrap"><i class="fa-brands fa-instagram"></i></div>
+          <div class="social-info">
+            <span class="social-name">@mister2rodas</span>
+            <span class="social-handle">instagram.com/mister2rodas</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+        </a>
+
+        <a href="https://www.instagram.com/tubamotors" target="_blank" class="social-card social-card--ig reveal-card">
+          <div class="social-glow"></div>
+          <div class="social-icon-wrap"><i class="fa-brands fa-instagram"></i></div>
+          <div class="social-info">
+            <span class="social-name">@tubamotors</span>
+            <span class="social-handle">instagram.com/tubamotors</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SITES OFICIAIS -->
+  <section class="websites-section reveal" id="sites">
+    <div class="container">
+      <div class="section-label"><i class="fa-solid fa-globe"></i> Presença Digital</div>
+      <h2 class="section-title">Sites Oficiais</h2>
+      <p class="section-sub">Acesse nossos portais exclusivos</p>
+      <div class="websites-list">
+
+        <a href="https://www.misterduasrodas.com.br" target="_blank" class="website-item reveal-card">
+          <div class="website-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="website-info">
+            <span class="website-name">Mister Duas Rodas</span>
+            <span class="website-url">www.misterduasrodas.com.br</span>
+          </div>
+          <div class="website-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+        <a href="https://www.mister2rodas.com.br" target="_blank" class="website-item reveal-card">
+          <div class="website-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="website-info">
+            <span class="website-name">Tuba Motors</span>
+            <span class="website-url">www.mister2rodas.com.br</span>
+          </div>
+          <div class="website-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact-section reveal" id="contato">
+    <div class="container">
+      <div class="section-label"><i class="fa-solid fa-location-dot"></i> Fale Conosco</div>
+      <h2 class="section-title">Contato</h2>
+      <p class="section-sub">Estamos prontos para te atender</p>
+      <div class="contact-grid">
+
+        <div class="contact-card reveal-card">
+          <div class="contact-card-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h4>Endereço</h4>
+          <p>Av. João Pedro Cardoso, 167<br />Parque Jabaquara - São Paulo</p>
+          <a href="https://maps.app.goo.gl/jpdcWcbshHBjtXNp8" target="_blank" class="contact-link">
+            <i class="fa-solid fa-map"></i> Ver no mapa
+          </a>
+        </div>
+
+        <div class="contact-card contact-card--wa reveal-card">
+          <div class="contact-card-icon contact-card-icon--wa">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h4>WhatsApp</h4>
+          <p>Atendimento rápido e direto<br />com nossa equipe</p>
+          <a href="https://wa.me/5511972465134" target="_blank" class="btn btn--whatsapp btn--full">
+            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-card contact-card--email reveal-card">
+          <div class="contact-card-icon contact-card-icon--email">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h4>E-mail</h4>
+          <p>Envie sua mensagem para <strong>contato@mister2rodas.com.br<br />e retornamos em breve</p>
+          <a href="mailto:contato@mister2rodas.com.br" class="contact-link contact-link--email">
+            <i class="fa-solid fa-paper-plane"></i> Enviar e-mail
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span>Mister Duas Rodas</span>
+      </div>
+      <p class="footer-copy">© 2026 Mister Duas Rodas. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#lojas">Lojas</a>
+        <a href="#redes">Redes Sociais</a>
+        <a href="#sites">Sites</a>
+        <a href="#contato">Contato</a>
+        <a href="politica-de-privacidade.html" class="footer-link-privacy"><i class="fa-solid fa-shield-halved"></i> Política de Privacidade</a>
+      </div>
+      <div class="footer-seguro">
+        <img src="assets/img/site_seguro.png" alt="Site 100% Seguro" class="badge-seguro">
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies">
+    <div class="cookie-banner-inner">
+      <div class="cookie-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+      <div class="cookie-text">
+        <p class="cookie-title">Usamos cookies</p>
+        <p class="cookie-desc">
+          Utilizamos cookies para melhorar sua experiência, personalizar conteúdos e analisar nosso tráfego.
+          Ao clicar em <strong>Aceitar</strong>, você concorda com nossa
+          <a href="politica-de-privacidade.html" class="cookie-policy-link">Política de Privacidade</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn-recusar" id="cookieRecusar">Recusar</button>
+        <button class="cookie-btn-aceitar" id="cookieAceitar"><i class="fa-solid fa-check"></i> Aceitar Cookies</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Flutuante - Cabeça -->
+  <a href="https://wa.me/5511972465134" target="_blank" class="boneco-float" aria-label="Fale conosco pelo WhatsApp">
+    <div class="boneco-balao">
+      Fale conosco
+      <div class="boneco-balao-seta"></div>
+    </div>
+    <img src="assets/img/cabeca ms.png" alt="Mister Duas Rodas" class="boneco-img" />
+  </a>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

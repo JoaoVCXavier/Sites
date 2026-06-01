@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — Mister Duas Rodas</title>
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="assets/img/favicon.ico" />
+  <style>
+    .policy-hero {
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(232,0,14,0.2);
+      padding: 120px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .policy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(232,0,14,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .policy-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red-glow2);
+      border: 1px solid var(--red-glow);
+      color: var(--red);
+      font-family: var(--font-cond);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .policy-hero p {
+      font-size: 0.95rem;
+      color: var(--gray-light);
+    }
+    .policy-content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+    .policy-section {
+      margin-bottom: 48px;
+    }
+    .policy-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .policy-section h2 i {
+      color: var(--red);
+      font-size: 1.2rem;
+    }
+    .policy-section p,
+    .policy-section li {
+      font-size: 0.95rem;
+      color: #b0b0b0;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .policy-section ul li {
+      padding-left: 22px;
+      position: relative;
+    }
+    .policy-section ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .policy-section a {
+      color: var(--red);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .policy-section a:hover { opacity: 0.8; }
+    .policy-divider {
+      border: none;
+      border-top: 1px solid var(--dark-4);
+      margin: 40px 0;
+    }
+    .policy-update {
+      background: var(--dark-3);
+      border-left: 3px solid var(--red);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 20px;
+      font-size: 0.85rem;
+      color: var(--gray-light);
+      margin-bottom: 48px;
+    }
+    .policy-update strong { color: var(--white); }
+    .policy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: 1px solid var(--gray-mid);
+      color: var(--gray-light);
+      font-family: var(--font-cond);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+      margin-bottom: 40px;
+    }
+    .policy-back:hover {
+      border-color: var(--red);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header id="top">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" aria-label="Voltar para a tela inicial">
+        <img src="assets/logos-tuba/mister.png" alt="Logo Mister Duas Rodas" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#lojas" class="nav-link">Lojas</a></li>
+        <li><a href="index.html#redes" class="nav-link">Redes Sociais</a></li>
+        <li><a href="index.html#sites" class="nav-link">Sites</a></li>
+        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO DA POLÍTICA -->
+  <section class="policy-hero">
+    <div class="container">
+      <div class="policy-hero-label"><i class="fa-solid fa-shield-halved"></i> Transparência &amp; Privacidade</div>
+      <h1>Política de Privacidade</h1>
+      <p>Última atualização: maio de 2026</p>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <div class="policy-content">
+    <a href="index.html" class="policy-back"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+
+    <div class="policy-update">
+      <strong>Nota:</strong> Esta Política de Privacidade se aplica ao site <strong>Mister Duas Rodas</strong> e descreve como coletamos, usamos e protegemos suas informações.
+    </div>
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-info-circle"></i> 1. Quem Somos</h2>
+      <p>O site <strong>Mister Duas Rodas</strong> é operado pela empresa Tuba Motors, localizada na Av. João Pedro Cardoso, 167, Parque Jabaquara, São Paulo – SP. Somos responsáveis pelo tratamento dos dados pessoais coletados neste site, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-database"></i> 2. Dados que Coletamos</h2>
+      <p>Podemos coletar as seguintes informações quando você utiliza nosso site:</p>
+      <ul>
+        <li>Dados de navegação: páginas visitadas, tempo de permanência, cliques e interações;</li>
+        <li>Dados de dispositivo: tipo de navegador, sistema operacional, resolução de tela e endereço IP (anonimizado);</li>
+        <li>Cookies de sessão e de preferências (descritos em detalhes na seção de Cookies);</li>
+        <li>Dados fornecidos voluntariamente ao entrar em contato pelo WhatsApp ou preencher formulários.</li>
+      </ul>
+      <p>Não coletamos dados de pagamento diretamente. Compras realizadas via Shopee ou Mercado Livre estão sujeitas às políticas de privacidade dessas plataformas.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-cookie-bite"></i> 3. Uso de Cookies</h2>
+      <p>Utilizamos cookies para garantir o funcionamento adequado do site e melhorar a sua experiência. Os tipos de cookies que usamos são:</p>
+      <ul>
+        <li><strong style="color:var(--white)">Cookies essenciais:</strong> necessários para o funcionamento básico do site, como preferências de navegação e segurança;</li>
+        <li><strong style="color:var(--white)">Cookies de desempenho:</strong> coletam dados anônimos sobre como os visitantes usam o site (ex.: páginas mais acessadas);</li>
+        <li><strong style="color:var(--white)">Cookies de preferências:</strong> armazenam suas escolhas, como aceite do banner de cookies.</li>
+      </ul>
+      <p>Ao clicar em <strong>"Aceitar Cookies"</strong>, você consente com o uso de todos os cookies. Ao clicar em <strong>"Recusar"</strong>, apenas os cookies essenciais serão mantidos.</p>
+      <p>Você pode gerenciar ou desativar cookies diretamente nas configurações do seu navegador a qualquer momento.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-bullseye"></i> 4. Finalidade do Uso dos Dados</h2>
+      <p>Os dados coletados são utilizados exclusivamente para:</p>
+      <ul>
+        <li>Melhorar a performance e experiência de navegação no site;</li>
+        <li>Entender o comportamento dos visitantes e otimizar o conteúdo;</li>
+        <li>Responder a dúvidas e solicitações feitas via WhatsApp ou outros canais;</li>
+        <li>Cumprir obrigações legais quando aplicável.</li>
+      </ul>
+      <p>Não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins comerciais sem o seu consentimento expresso.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-share-nodes"></i> 5. Compartilhamento de Dados</h2>
+      <p>Seus dados podem ser compartilhados apenas nas seguintes situações:</p>
+      <ul>
+        <li>Com plataformas de análise (como Google Analytics), de forma anonimizada;</li>
+        <li>Com autoridades competentes, quando exigido por lei ou decisão judicial;</li>
+        <li>Com prestadores de serviços técnicos que auxiliam na operação do site, sujeitos a acordos de confidencialidade.</li>
+      </ul>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-lock"></i> 6. Segurança dos Dados</h2>
+      <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, perda, alteração ou divulgação indevida. No entanto, nenhuma transmissão via internet é 100% segura, e não podemos garantir segurança absoluta.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-user-shield"></i> 7. Seus Direitos (LGPD)</h2>
+      <p>Como titular de dados, você possui os seguintes direitos garantidos pela LGPD:</p>
+      <ul>
+        <li>Confirmar se tratamos seus dados pessoais;</li>
+        <li>Acessar os dados que possuímos sobre você;</li>
+        <li>Solicitar a correção de dados incompletos ou desatualizados;</li>
+        <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Revogar o consentimento a qualquer momento;</li>
+        <li>Solicitar a portabilidade dos seus dados;</li>
+        <li>Apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+      </ul>
+      <p>Para exercer qualquer um desses direitos, entre em contato conosco pelo WhatsApp: <a href="https://wa.me/5511972465134" target="_blank">(11) 97246-5134</a>.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-clock-rotate-left"></i> 8. Retenção de Dados</h2>
+      <p>Mantemos seus dados pelo tempo necessário para cumprir as finalidades descritas nesta política ou conforme exigido por lei. Dados anonimizados podem ser mantidos por tempo indeterminado para fins estatísticos.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-link"></i> 9. Links Externos</h2>
+      <p>Nosso site contém links para plataformas externas como Shopee, Mercado Livre, Facebook, Instagram e WhatsApp. Não nos responsabilizamos pelas práticas de privacidade dessas plataformas. Recomendamos que você consulte as políticas de privacidade de cada uma delas.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-pen-to-square"></i> 10. Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando isso ocorrer, a data de "Última atualização" no topo desta página será alterada. Recomendamos que você revise esta página regularmente para se manter informado sobre como protegemos seus dados.</p>
+    </div>
+
+    <hr class="policy-divider" />
+
+    <div class="policy-section">
+      <h2><i class="fa-solid fa-envelope"></i> 11. Contato</h2>
+      <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados, entre em contato conosco:</p>
+      <ul>
+        <li><strong style="color:var(--white)">Endereço:</strong> Av. João Pedro Cardoso, 167 – Parque Jabaquara, São Paulo – SP</li>
+        <li><strong style="color:var(--white)">WhatsApp:</strong> <a href="https://wa.me/5511972465134" target="_blank">(11) 97246-5134</a></li>
+      </ul>
+    </div>
+
+    <a href="index.html" class="policy-back"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span>Mister Duas Rodas</span>
+      </div>
+      <p class="footer-copy">© 2026 Mister Duas Rodas. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="index.html#lojas">Lojas</a>
+        <a href="index.html#redes">Redes Sociais</a>
+        <a href="index.html#sites">Sites</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="politica-de-privacidade.html" class="footer-link-privacy"><i class="fa-solid fa-shield-halved"></i> Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar
+    const header    = document.querySelector('header');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu   = document.getElementById('navMenu');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
