@@ -20,8 +20,24 @@ function siteUrl(): Plugin {
   }
 }
 
+/**
+ * Deploys de Preview (VERCEL_ENV=preview) ou NOINDEX=1: pede aos buscadores para não indexar.
+ * Não afeta o build de produção oficial.
+ */
+function noindexOnPreview(): Plugin {
+  const enabled = process.env.VERCEL_ENV === 'preview' || process.env.NOINDEX === '1'
+  return {
+    name: 'vm-noindex-preview',
+    transformIndexHtml(html) {
+      return enabled
+        ? html.replace('<meta charset="UTF-8" />', '<meta charset="UTF-8" />\n    <meta name="robots" content="noindex, nofollow" />')
+        : html
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(), siteUrl()],
+  plugins: [react(), tailwindcss(), siteUrl(), noindexOnPreview()],
   base: './',
   build: {
     target: 'es2022',
