@@ -5,7 +5,13 @@ import { gsap, prefersReducedMotion, ScrollTrigger } from '../lib/gsap'
  * Faixa contínua com textos oficiais da marca. Velocidade base constante,
  * acelerada e invertida conforme a direção/velocidade da rolagem.
  */
-export function Marquee({ items, className = '' }: { items: string[]; className?: string }) {
+export function Marquee({
+  items,
+  className = '',
+}: {
+  items: { text: string; lang?: string }[]
+  className?: string
+}) {
   const track = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
@@ -36,7 +42,9 @@ export function Marquee({ items, className = '' }: { items: string[]; className?
     <div className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {items.map((t, i) => (
         <span key={i} className="flex items-center">
-          <span className="px-6 sm:px-10">{t}</span>
+          <span lang={t.lang} className="px-6 sm:px-10">
+            {t.text}
+          </span>
           <span className="monogram h-[0.7em] opacity-70" aria-hidden="true" />
         </span>
       ))}

@@ -68,11 +68,12 @@ export function Collections({ onExplore }: { onExplore: (id: CollectionId) => vo
                   onPointerEnter={(e) => e.pointerType === 'mouse' && setHovered(c.id)}
                   onFocus={() => setHovered(c.id)}
                   onBlur={() => setHovered(null)}
-                  className="group grid w-full grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-3 py-8 text-left sm:gap-x-10 sm:py-12 lg:grid-cols-[6rem_1fr_minmax(0,22rem)_auto]"
-                  aria-label={`Explorar ${c.title} na vitrine — ${list.length} modelos`}
+                  className="group grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-3 py-8 text-left sm:gap-x-10 sm:py-12 lg:grid-cols-[6rem_1fr_minmax(0,22rem)_auto]"
                 >
-                  <span className="label self-start pt-2 text-ash tabular-nums sm:pt-4">0{i + 1}</span>
-                  <span className="display text-[clamp(3rem,9vw,8rem)] transition-[font-stretch,letter-spacing] duration-700 ease-[var(--ease-out-expo)] group-hover:tracking-[0.01em] [font-stretch:62%] group-hover:[font-stretch:80%]">
+                  <span aria-hidden="true" className="label self-start pt-2 text-ash tabular-nums sm:pt-4">
+                    0{i + 1}
+                  </span>
+                  <span className="display text-[clamp(2.25rem,11vw,8rem)] transition-[font-stretch,letter-spacing] duration-700 ease-[var(--ease-out-expo)] group-hover:tracking-[0.01em] [font-stretch:62%] group-hover:[font-stretch:80%]">
                     {c.title}
                   </span>
                   <span className="col-span-3 col-start-1 flex flex-col gap-2 text-ink/75 sm:col-start-2 lg:col-span-1 lg:col-start-3">

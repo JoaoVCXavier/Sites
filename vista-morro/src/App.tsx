@@ -43,7 +43,7 @@ export default function App() {
         <main>
           <Hero onExplore={() => scrollToId('colecoes')} />
           <Marquee
-            items={[brand.signature, brand.descriptor, brand.name]}
+            items={[{ text: brand.signature }, { text: brand.descriptor, lang: 'en' }, { text: brand.name }]}
             className="display border-y border-ink bg-paper py-4 text-[clamp(2rem,5vw,4rem)] text-ink"
           />
           <Showcase

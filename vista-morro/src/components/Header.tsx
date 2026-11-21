@@ -50,6 +50,7 @@ export function Header() {
 
       <motion.header
         className="fixed inset-x-0 top-0 z-50"
+        onFocusCapture={() => setHidden(false)}
         animate={{ y: hidden && !open ? '-100%' : '0%' }}
         transition={{ duration: 0.5, ease: easeOutExpo }}
       >
@@ -60,7 +61,7 @@ export function Header() {
           aria-hidden="true"
         />
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 text-paper sm:h-[4.5rem] sm:px-8">
-          <a href="#topo" className="group flex items-center gap-3" aria-label="Vista Morro — início">
+          <a href="#topo" className="group flex min-h-11 min-w-11 items-center gap-3" aria-label="Vista Morro — início">
             <span className="monogram h-9 transition-transform duration-500 group-hover:-rotate-6 sm:h-10" aria-hidden="true" />
             <span className="label hidden tracking-[0.22em] xs:inline">Vista Morro</span>
           </a>
@@ -82,7 +83,7 @@ export function Header() {
               href={brand.links.catalog.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="label hidden items-center gap-2 rounded-full border border-line px-4 py-2.5 transition-colors hover:border-paper sm:inline-flex"
+              className="label hidden min-h-11 items-center gap-2 rounded-full border border-line px-4 transition-colors hover:border-paper sm:inline-flex"
             >
               Catálogo
               <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -118,7 +119,7 @@ export function Header() {
         {open && (
           <motion.div
             id="menu-mobile"
-            className="fixed inset-0 z-40 flex flex-col bg-ink px-4 pt-24 pb-8 text-paper md:hidden"
+            className="fixed inset-0 z-40 flex flex-col overflow-y-auto overscroll-contain bg-ink px-4 pt-24 pb-8 text-paper md:hidden"
             initial={{ clipPath: 'inset(0% 0% 100% 0%)' }}
             animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
             exit={{ clipPath: 'inset(0% 0% 100% 0%)' }}
@@ -131,21 +132,22 @@ export function Header() {
                     <motion.a
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="display flex items-baseline justify-between py-3 text-[clamp(3rem,16vw,5rem)]"
+                      className="display flex items-baseline justify-between py-3 text-[clamp(2.25rem,min(16vw,11svh),5rem)] focus-visible:shadow-none focus-visible:outline-paper focus-visible:outline-offset-[-4px]"
                       initial={{ y: '110%' }}
                       animate={{ y: '0%' }}
                       exit={{ y: '-110%' }}
                       transition={{ duration: 0.7, delay: 0.15 + i * 0.06, ease: easeOutExpo }}
                     >
                       {item.label}
-                      <span className="label text-smoke">0{i + 1}</span>
+                      <span aria-hidden="true" className="label text-smoke">0{i + 1}</span>
                     </motion.a>
                   </li>
                 ))}
               </ul>
             </nav>
             <motion.div
-              className="flex items-end justify-between gap-4"
+              aria-hidden="true"
+              className="mt-8 flex items-end justify-between gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { delay: 0.5 } }}
               exit={{ opacity: 0 }}

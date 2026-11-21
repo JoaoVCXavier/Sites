@@ -78,8 +78,10 @@ function parseMeasures(description = '') {
   return { header, rows }
 }
 
+/** Frase de abertura da descrição — ignorada quando a primeira linha é uma medida (ex.: "Tamanho M - 74cm…"). */
 function intro(description = '') {
-  return description.split('\n')[0].trim()
+  const first = description.split('\n')[0].trim()
+  return /\d\s*cm\b/i.test(first) ? '' : first
 }
 
 async function processImage(productId, image) {

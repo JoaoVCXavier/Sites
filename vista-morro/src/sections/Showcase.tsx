@@ -68,7 +68,7 @@ export function Showcase({ filter, onFilter, onOpen }: ShowcaseProps) {
                   type="button"
                   aria-pressed={pressed}
                   onClick={() => onFilter(f.id)}
-                  className={`label rounded-full border px-4 py-2.5 transition-colors duration-300 ${
+                  className={`label min-h-11 rounded-full border px-4 transition-colors duration-300 ${
                     pressed
                       ? 'border-paper bg-paper text-ink'
                       : 'border-line text-paper/80 hover:border-paper/60 hover:text-paper'
@@ -81,8 +81,8 @@ export function Showcase({ filter, onFilter, onOpen }: ShowcaseProps) {
             })}
           </div>
           <p className="label text-smoke">
-            <span className="hidden sm:inline">Arraste, clique ou use as setas do teclado</span>
-            <span className="sm:hidden">Deslize para os lados · toque para ver detalhes</span>
+            <span className="pointer-coarse:hidden">Arraste, clique ou use as setas do teclado</span>
+            <span className="hidden pointer-coarse:inline">Deslize para os lados · toque para ver detalhes</span>
           </p>
         </div>
       </div>
@@ -103,12 +103,16 @@ export function Showcase({ filter, onFilter, onOpen }: ShowcaseProps) {
 
 interface Metrics {
   width: number
+  height: number
   itemW: number
   spacing: number
   compact: boolean
 }
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v))
+
+/** altura da peça pendurada ÷ largura (cabide + foto oficial ≈ 1.3:1) */
+const GARMENT_RATIO = 0.98
 
 /** Distribuição em profundidade: centro em destaque, laterais menores e mais distantes. */
 function layout(d: number, m: Metrics) {
@@ -140,25 +144,46 @@ function Rail({
   const stageRef = useRef<HTMLDivElement>(null)
   const buttonsRef = useRef<(HTMLButtonElement | null)[]>([])
   const anim = useRef<AnimationPlaybackControls | null>(null)
-  const [m, setM] = useState<Metrics>({ width: 1200, itemW: 400, spacing: 300, compact: false })
+  const [m, setM] = useState<Metrics>({ width: 1200, height: 432, itemW: 400, spacing: 300, compact: false })
 
   // Medidas responsivas da arara
   useLayoutEffect(() => {
     const el = stageRef.current
     if (!el) return
+    // A largura da peça vem da largura do palco (limitada pela altura da janela);
+    // a altura do palco deriva da peça — sem faixa vazia abaixo dela.
     const measure = () => {
-      const { width, height } = el.getBoundingClientRect()
+      const width = el.getBoundingClientRect().width
+      const vh = document.documentElement.clientHeight
       const compact = width < 640
-      // a peça pendurada ocupa ~0.98 × largura em altura (cabide + foto ~1.3:1)
-      const byHeight = (height - 24) / 0.98
-      const byWidth = compact ? width * 0.68 : width * 0.32
-      const itemW = Math.round(clamp(Math.min(byHeight, byWidth), 180, 560))
-      setM({ width, itemW, spacing: itemW * (compact ? 0.7 : 0.8), compact })
+      const byWidth = compact ? width * 0.68 : width < 1024 ? width * 0.42 : width * 0.32
+      const byHeight = (Math.min(vh * 0.6, 660) - 40) / GARMENT_RATIO
+      const itemW = Math.round(clamp(Math.min(byWidth, byHeight), 150, 560))
+      setM({
+        width,
+        itemW,
+        height: Math.round(itemW * GARMENT_RATIO + 40),
+        spacing: itemW * (compact ? 0.7 : 0.8),
+        compact,
+      })
     }
     measure()
     const ro = new ResizeObserver(measure)
     ro.observe(el)
-    return () => ro.disconnect()
+    // altura da janela: só reage a mudanças grandes (evita saltos com a barra de endereço do celular)
+    let lastVh = document.documentElement.clientHeight
+    const onResize = () => {
+      const vh = document.documentElement.clientHeight
+      if (Math.abs(vh - lastVh) > 120) {
+        lastVh = vh
+        measure()
+      }
+    }
+    window.addEventListener('resize', onResize)
+    return () => {
+      ro.disconnect()
+      window.removeEventListener('resize', onResize)
+    }
   }, [])
 
   useMotionValueEvent(pos, 'change', (v) => {
@@ -276,7 +301,8 @@ function Rail({
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
         onWheel={onWheel}
-        className="relative h-[min(56svh,620px)] min-h-[380px] cursor-grab touch-pan-y overscroll-x-contain select-none active:cursor-grabbing"
+        style={{ height: m.height }}
+        className="relative cursor-grab touch-pan-y overscroll-x-contain select-none active:cursor-grabbing"
       >
         {/* barra metálica */}
         <div
@@ -318,7 +344,7 @@ function Rail({
           )}
         </div>
 
-        <div className="relative min-h-[1em] overflow-hidden text-[clamp(2.75rem,8vw,7rem)] leading-none md:col-start-1 lg:col-start-2">
+        <div className="relative min-h-[1em] overflow-hidden text-[clamp(2.75rem,8vw,7rem)] leading-none md:col-start-1 lg:col-start-2 lg:text-[clamp(2.75rem,6.5vw,7rem)] xl:text-[clamp(2.75rem,8vw,7rem)]">
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.h3
               key={current?.slug}

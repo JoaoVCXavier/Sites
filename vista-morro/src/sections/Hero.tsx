@@ -69,7 +69,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9, ease: easeOutExpo }}
         >
-          {brand.descriptor}
+          <span lang="en">{brand.descriptor}</span>
         </motion.p>
         <motion.p
           className="label hidden text-right text-smoke sm:block"
@@ -138,7 +138,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         <a
           href="#vitrine"
           className="label group hidden flex-col items-center gap-3 justify-self-center text-smoke sm:flex"
-          aria-label="Rolar até a vitrine"
+          aria-label="Role até a vitrine"
         >
           <span>Role</span>
           <span aria-hidden="true" className="relative block h-12 w-px overflow-hidden bg-line">

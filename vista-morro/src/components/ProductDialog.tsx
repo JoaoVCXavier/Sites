@@ -72,14 +72,14 @@ export function ProductDialog({ model, preferPlus, onClose }: Props) {
       />
 
       <motion.div
-        className="absolute inset-0 grid overflow-y-auto overscroll-contain bg-ink text-paper md:inset-y-3 md:right-3 md:left-auto md:w-[min(1180px,calc(100vw-1.5rem))] md:grid-cols-[1.15fr_1fr] md:overflow-hidden md:rounded-sm"
+        className="absolute inset-0 grid grid-cols-[minmax(0,1fr)] overflow-y-auto overscroll-contain bg-ink text-paper md:inset-y-3 md:right-3 md:left-auto md:w-[min(1180px,calc(100vw-1.5rem))] md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] md:overflow-hidden md:rounded-sm"
         initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
         animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
         exit={{ clipPath: 'inset(0% 0% 100% 0%)' }}
         transition={{ duration: 0.85, ease: easeInOutQuart }}
       >
         {/* Galeria */}
-        <div className="relative flex min-h-[58svh] flex-col bg-[#e6e3dc] text-ink md:min-h-0">
+        <div className="relative flex min-h-[max(58svh,20rem)] min-w-0 flex-col bg-[#e6e3dc] text-ink md:min-h-0">
           <div className="relative flex-1">
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.img
@@ -129,7 +129,7 @@ export function ProductDialog({ model, preferPlus, onClose }: Props) {
 
         {/* Informações */}
         <motion.div
-          className="relative flex flex-col gap-8 px-5 py-8 sm:px-10 sm:py-12 md:overflow-y-auto"
+          className="relative flex min-w-0 flex-col gap-8 px-5 py-8 sm:px-10 sm:py-12 md:overflow-y-auto"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
@@ -164,7 +164,7 @@ export function ProductDialog({ model, preferPlus, onClose }: Props) {
                   type="button"
                   aria-pressed={version === v}
                   onClick={() => switchVersion(v)}
-                  className={`label rounded-full px-4 py-2 transition-colors ${
+                  className={`label rounded-full px-4 py-3 transition-colors ${
                     version === v ? 'bg-paper text-ink' : 'text-paper/70 hover:text-paper'
                   }`}
                 >

@@ -16,7 +16,7 @@
   --color-paper: #f4f3f0;
   --color-paper-2: #e9e7e1;
   --color-smoke: #a3a3a3;
-  --color-ash: #6b6b69;
+  --color-ash: #5f5f5d;
   --color-line: rgb(244 243 240 / 0.14);
   --color-line-ink: rgb(8 8 8 / 0.14);
 
@@ -50,9 +50,13 @@
     }
   }
 
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   body {
     min-height: 100dvh;
-    overflow-x: clip;
   }
 
   ::selection {
@@ -60,9 +64,11 @@
     color: var(--color-ink);
   }
 
+  /* Anel de foco em dois tons: faixa clara + contorno escuro — visível em qualquer fundo. */
   :focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-paper);
   }
 
   img {

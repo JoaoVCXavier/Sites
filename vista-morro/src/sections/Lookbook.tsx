@@ -74,7 +74,7 @@ export function Lookbook() {
         const reveal = gsap.fromTo(
           tile,
           { clipPath: 'inset(100% 0% 0% 0%)' },
-          { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.out', paused: true },
+          { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.out', paused: true, clearProps: 'clipPath' },
         )
         const play = () => reveal.play()
         ScrollTrigger.create({ trigger: tile, start: 'top 88%', onEnter: play, onLeave: play, onEnterBack: play })

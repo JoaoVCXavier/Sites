@@ -16,7 +16,7 @@ export function About() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         el.querySelectorAll('[data-word]'),
-        { opacity: 0.16 },
+        { opacity: 0.32 },
         {
           opacity: 1,
           stagger: 0.08,
