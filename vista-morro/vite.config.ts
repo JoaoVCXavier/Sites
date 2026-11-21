@@ -1,9 +1,27 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+/**
+ * Redes sociais exigem URLs absolutas em og:image. Defina SITE_URL no build
+ * (ex.: SITE_URL=https://vistamorro.com.br npm run build) para gerar URLs absolutas e o canonical.
+ */
+function siteUrl(): Plugin {
+  const url = process.env.SITE_URL?.replace(/\/$/, '')
+  return {
+    name: 'vm-site-url',
+    transformIndexHtml(html) {
+      if (!url) return html
+      return html
+        .replaceAll('content="./og.jpg"', `content="${url}/og.jpg"`)
+        .replace('"logo": "./brand/logo-original.webp"', `"logo": "${url}/brand/logo-original.webp"`)
+        .replace('</title>', `</title>\n    <link rel="canonical" href="${url}/" />\n    <meta property="og:url" content="${url}/" />`)
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), siteUrl()],
   base: './',
   build: {
     target: 'es2022',

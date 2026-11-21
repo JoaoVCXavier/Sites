@@ -13,12 +13,10 @@ export function useReveal<T extends HTMLElement>() {
     const ctx = gsap.context(() => {
       const els = gsap.utils.toArray<HTMLElement>('[data-reveal]', root)
       gsap.set(els, { y: 48, opacity: 0 })
-      ScrollTrigger.batch(els, {
-        start: 'top 90%',
-        once: true,
-        onEnter: (batch) =>
-          gsap.to(batch, { y: 0, opacity: 1, duration: 1.1, ease: 'expo.out', stagger: 0.09, overwrite: true }),
-      })
+      const show = (batch: Element[]) =>
+        gsap.to(batch, { y: 0, opacity: 1, duration: 1.1, ease: 'expo.out', stagger: 0.09, overwrite: true })
+      // onLeave/onEnterBack: cobre a página carregada já rolada além da seção (âncora, restauração de rolagem).
+      ScrollTrigger.batch(els, { start: 'top 90%', onEnter: show, onLeave: show, onEnterBack: show })
     }, root)
     return () => ctx.revert()
   }, [])

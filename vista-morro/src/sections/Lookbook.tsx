@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Maximize2, X } from 'lucide-react'
 import { asset, findModel, srcSet } from '../data/catalog'
 import type { Model, ProductImage } from '../data/types'
 import { SectionLabel } from '../components/SectionLabel'
-import { gsap, prefersReducedMotion } from '../lib/gsap'
+import { gsap, prefersReducedMotion, ScrollTrigger } from '../lib/gsap'
 import { easeOutExpo } from '../lib/ease'
 
 /**
@@ -71,16 +71,13 @@ export function Lookbook() {
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('[data-tile]').forEach((tile) => {
         const media = tile.querySelector('[data-parallax]')
-        gsap.fromTo(
+        const reveal = gsap.fromTo(
           tile,
           { clipPath: 'inset(100% 0% 0% 0%)' },
-          {
-            clipPath: 'inset(0% 0% 0% 0%)',
-            duration: 1.4,
-            ease: 'expo.out',
-            scrollTrigger: { trigger: tile, start: 'top 88%', once: true },
-          },
+          { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.out', paused: true },
         )
+        const play = () => reveal.play()
+        ScrollTrigger.create({ trigger: tile, start: 'top 88%', onEnter: play, onLeave: play, onEnterBack: play })
         if (media)
           gsap.fromTo(
             media,

@@ -88,7 +88,13 @@ export function Showcase({ filter, onFilter, onOpen }: ShowcaseProps) {
       </div>
 
       {/* `key` reinicia a arara (posição e animação de entrada) ao trocar de coleção */}
-      <Rail key={filter} items={items} preferPlus={filter === 'plus-size'} onOpen={onOpen} />
+      {items.length > 0 ? (
+        <Rail key={filter} items={items} preferPlus={filter === 'plus-size'} onOpen={onOpen} />
+      ) : (
+        <p className="editorial mx-auto mt-16 max-w-[1600px] px-4 text-3xl text-smoke sm:px-8">
+          Nenhuma peça publicada nesta coleção no momento.
+        </p>
+      )}
     </section>
   )
 }

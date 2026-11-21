@@ -13,13 +13,18 @@ export function Marquee({ items, className = '' }: { items: string[]; className?
     if (!el || prefersReducedMotion()) return
     const ctx = gsap.context(() => {
       const loop = gsap.to(el, { xPercent: -50, ease: 'none', duration: 28, repeat: -1 })
-      let direction = 1
+      // Afasta o tempo do zero para que a reprodução invertida (rolagem para cima) nunca pare no início.
+      loop.totalTime(loop.duration() * 1000)
       const st = ScrollTrigger.create({
         onUpdate: (self) => {
-          if (self.direction !== direction) direction = self.direction
+          const direction = self.direction
           const boost = Math.min(Math.abs(self.getVelocity()) / 400, 4)
-          gsap.to(loop, { timeScale: direction * (1 + boost), duration: 0.3, overwrite: true })
-          gsap.to(loop, { timeScale: direction, duration: 1.2, delay: 0.3 })
+          gsap.to(loop, {
+            timeScale: direction * (1 + boost),
+            duration: 0.3,
+            overwrite: true,
+            onComplete: () => void gsap.to(loop, { timeScale: direction, duration: 1.2, overwrite: true }),
+          })
         },
       })
       return () => st.kill()

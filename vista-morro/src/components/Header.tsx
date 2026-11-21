@@ -12,10 +12,10 @@ export function Header() {
   const menuButton = useRef<HTMLButtonElement>(null)
 
   useMotionValueEvent(scrollY, 'change', (y) => {
-    const prev = scrollY.getPrevious() ?? 0
+    const delta = y - (scrollY.getPrevious() ?? 0)
     setScrolled(y > 40)
-    setHidden(y > 320 && y > prev + 4)
-    if (y < prev - 4) setHidden(false)
+    if (y <= 320 || delta < -4) setHidden(false)
+    else if (delta > 4) setHidden(true)
   })
 
   // Menu mobile: Esc fecha e devolve o foco ao botão; rolagem da página bloqueada.

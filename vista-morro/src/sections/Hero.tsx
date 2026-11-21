@@ -126,8 +126,8 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         )}
       </div>
 
+      <div data-hero="fade">
       <motion.div
-        data-hero="fade"
         className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-end gap-5 px-4 pb-6 sm:grid-cols-3 sm:gap-6 sm:px-8 sm:pb-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -159,6 +159,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
           </button>
         </div>
       </motion.div>
+      </div>
     </section>
   )
 }

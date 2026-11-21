@@ -8,7 +8,7 @@
  *
  * Uso: npm run sync:catalog
  */
-import { mkdir, writeFile, rm } from 'node:fs/promises'
+import { mkdir, writeFile, rm, rename } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
@@ -18,6 +18,8 @@ const API = 'https://graph.meucatalogo.app'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const PUBLIC_DIR = join(ROOT, 'public')
 const IMG_DIR = join(PUBLIC_DIR, 'catalog')
+// As fotos novas são gravadas aqui e só substituem as atuais se a sincronização terminar sem erros.
+const TMP_IMG_DIR = join(PUBLIC_DIR, '.catalog-tmp')
 const OUT_JSON = join(ROOT, 'src', 'data', 'catalog.generated.json')
 const WIDTHS = [480, 960]
 
@@ -85,7 +87,7 @@ async function processImage(productId, image) {
   // As fotos oficiais têm fundo transparente: trim recorta exatamente o contorno da peça.
   const trimmed = await sharp(raw).trim({ threshold: 1 }).toBuffer({ resolveWithObject: true })
   const { width, height } = trimmed.info
-  const dir = join(IMG_DIR, productId)
+  const dir = join(TMP_IMG_DIR, productId)
   await mkdir(dir, { recursive: true })
   const srcset = {}
   for (const w of WIDTHS) {
@@ -126,17 +128,25 @@ async function buildLogoMask(url) {
 async function main() {
   console.log('→ loja')
   const { store } = await gql('store', STORE_Q, { publicId: STORE_ID })
-  const { productList } = await gql('products', LIST_Q, {
-    storeId: STORE_ID, skip: 0, first: 200, orderBy: 'createdAt_DESC',
-  })
-  console.log(`→ ${productList.total} produtos`)
+  const PAGE = 100
+  const ids = []
+  let total = Infinity
+  while (ids.length < total) {
+    const { productList } = await gql('products', LIST_Q, {
+      storeId: STORE_ID, skip: ids.length, first: PAGE, orderBy: 'createdAt_DESC',
+    })
+    total = productList.total
+    if (productList.products.length === 0) break
+    ids.push(...productList.products.map((p) => p.id))
+  }
+  console.log(`→ ${ids.length} de ${total} produtos`)
 
-  await rm(IMG_DIR, { recursive: true, force: true })
+  await rm(TMP_IMG_DIR, { recursive: true, force: true })
   await mkdir(join(PUBLIC_DIR, 'brand'), { recursive: true })
   const logo = await buildLogoMask(store.logo.url)
 
   const products = []
-  for (const { id } of productList.products) {
+  for (const id of ids) {
     const { product: p } = await gql('product', PRODUCT_Q, { id })
     const variation = (name) =>
       (p.variations ?? []).find((v) => v.name?.toLowerCase() === name)?.options.map((o) => o.name) ?? []
@@ -172,12 +182,16 @@ async function main() {
     },
     products,
   }
+  // Tudo baixado: troca as fotos e grava o JSON.
+  await rm(IMG_DIR, { recursive: true, force: true })
+  await rename(TMP_IMG_DIR, IMG_DIR)
   await mkdir(dirname(OUT_JSON), { recursive: true })
   await writeFile(OUT_JSON, JSON.stringify(out, null, 2) + '\n')
   console.log(`✓ ${OUT_JSON}`)
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
+  await rm(TMP_IMG_DIR, { recursive: true, force: true })
   console.error(err)
   process.exit(1)
 })

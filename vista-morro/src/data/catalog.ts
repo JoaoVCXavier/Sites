@@ -62,7 +62,8 @@ function buildModels(products: CatalogProduct[]): Model[] {
       fullName: regular.title.replace(PLUS, ''),
       category: regular.category,
       regular,
-      plus: g.regular ? (g.plus ?? null) : null,
+      // Versão Plus Size só conta se tiver fotos; um desenho só-Plus usa o mesmo produto nos dois campos.
+      plus: g.plus && g.plus.images.length > 0 ? g.plus : null,
       hero,
       heroTone: c?.tone ?? 'ink',
       available: regular.available || Boolean(g.plus?.available),

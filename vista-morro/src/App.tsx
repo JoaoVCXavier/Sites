@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence } from 'motion/react'
 import { Header } from './components/Header'
 import { Marquee } from './components/Marquee'
@@ -20,6 +20,16 @@ const scrollToId = (id: string) => {
 export default function App() {
   const [filter, setFilter] = useState<CollectionId>('todas')
   const [selected, setSelected] = useState<{ model: Model; preferPlus: boolean } | null>(null)
+
+  // Link direto para uma seção (ex.: /#contato): a SPA monta depois do carregamento, então rola manualmente.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (!id) return
+    const go = () => document.getElementById(id)?.scrollIntoView({ behavior: 'instant', block: 'start' })
+    requestAnimationFrame(go)
+    // as fontes alteram as alturas das seções: reposiciona quando terminarem de carregar
+    document.fonts?.ready.then(() => requestAnimationFrame(go))
+  }, [])
 
   const exploreCollection = useCallback((id: CollectionId) => {
     setFilter(id)

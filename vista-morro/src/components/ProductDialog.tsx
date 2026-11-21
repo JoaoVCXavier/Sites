@@ -20,12 +20,14 @@ const SPEC_ORDER = ['Modelagem', 'Composição', 'Malha', 'Gramatura', 'Fio'] as
 export function ProductDialog({ model, preferPlus, onClose }: Props) {
   const ref = useRef<HTMLDialogElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
+  const hasVersions = model.plus !== null && model.plus !== model.regular
   const [version, setVersion] = useState<'regular' | 'plus'>(preferPlus && model.plus ? 'plus' : 'regular')
   const product = version === 'plus' && model.plus ? model.plus : model.regular
+  // Começa na foto escolhida para o cabide quando ela existe nesta versão; senão, na primeira.
   const [imageIndex, setImageIndex] = useState(() =>
-    Math.max(0, model.regular.images.findIndex((i) => i.id === model.hero.id)),
+    Math.max(0, product.images.findIndex((i) => i.id === model.hero.id)),
   )
-  const image = product.images[imageIndex] ?? product.images[0]
+  const image = product.images[imageIndex] ?? product.images[0] ?? model.hero
 
   useEffect(() => {
     const dialog = ref.current
@@ -87,7 +89,7 @@ export function ProductDialog({ model, preferPlus, onClose }: Props) {
                 sizes="(max-width: 768px) 100vw, 55vw"
                 width={image.width}
                 height={image.height}
-                alt={`${product.title} — foto ${imageIndex + 1} de ${product.images.length}`}
+                alt={`${product.title} — foto ${Math.min(imageIndex + 1, Math.max(product.images.length, 1))} de ${Math.max(product.images.length, 1)}`}
                 className="absolute inset-0 m-auto max-h-[82%] w-[86%] object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.25)]"
                 initial={{ opacity: 0, scale: 0.96, y: 16 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -154,7 +156,7 @@ export function ProductDialog({ model, preferPlus, onClose }: Props) {
             </h2>
           </div>
 
-          {model.plus && (
+          {hasVersions && (
             <div role="group" aria-label="Versão" className="inline-flex w-fit rounded-full border border-line p-1">
               {(['regular', 'plus'] as const).map((v) => (
                 <button
