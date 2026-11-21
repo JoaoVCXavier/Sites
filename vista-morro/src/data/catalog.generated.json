@@ -1,0 +1,1142 @@
+{
+  "syncedAt": "2026-11-21T10:32:08.484Z",
+  "source": "https://meucatalogo.app/vistamorro",
+  "store": {
+    "name": "VISTA MORRO",
+    "color": "#000000",
+    "categories": [
+      "Camisetas",
+      "Lançamentos"
+    ],
+    "whatsapp": "5511990120825",
+    "about": null,
+    "logoMask": {
+      "src": "brand/vm-monogram.webp",
+      "width": 594,
+      "height": 673
+    }
+  },
+  "products": [
+    {
+      "id": "6afb22614f19ba000835b374",
+      "title": "Camiseta VM Angel PLUS SIZE",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Preto Marmorizado"
+      ],
+      "images": [
+        {
+          "id": "6afb22614f19ba000835b376",
+          "width": 924,
+          "height": 693,
+          "srcset": {
+            "480": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-480.webp",
+            "960": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-960.webp"
+          }
+        },
+        {
+          "id": "6afb22614f19ba000835b377",
+          "width": 924,
+          "height": 694,
+          "srcset": {
+            "480": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-480.webp",
+            "960": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6afb22614f19ba000835b374"
+    },
+    {
+      "id": "6afb221f4f19ba000835b36b",
+      "title": "Camiseta VM Angel",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Preto Marmorizado"
+      ],
+      "images": [
+        {
+          "id": "6afb221f4f19ba000835b36d",
+          "width": 924,
+          "height": 693,
+          "srcset": {
+            "480": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-480.webp",
+            "960": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-960.webp"
+          }
+        },
+        {
+          "id": "6afb221f4f19ba000835b36e",
+          "width": 924,
+          "height": 694,
+          "srcset": {
+            "480": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-480.webp",
+            "960": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6afb221f4f19ba000835b36b"
+    },
+    {
+      "id": "6afb043c4f19ba000835ac2d",
+      "title": "Camiseta VM Signature PLUS SIZE",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [],
+      "images": [
+        {
+          "id": "6afb04f94f19ba000835ac4f",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-480.webp",
+            "960": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6afb043c4f19ba000835ac2d"
+    },
+    {
+      "id": "6ae1490c4f19ba000733a516",
+      "title": "Camiseta VM Signature",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6ae1490c4f19ba000733a518",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-480.webp",
+            "960": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6ae1490c4f19ba000733a516"
+    },
+    {
+      "id": "6ae148c54f19ba000733a509",
+      "title": "Camiseta VM Money Run PLUS SIZE",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white"
+      ],
+      "images": [
+        {
+          "id": "6ae148c54f19ba000733a50b",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-480.webp",
+            "960": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6ae148c54f19ba000733a509"
+    },
+    {
+      "id": "6ae148864f19ba000733a4fe",
+      "title": "Camiseta VM Money Run",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white"
+      ],
+      "images": [
+        {
+          "id": "6ae148864f19ba000733a500",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-480.webp",
+            "960": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6ae148864f19ba000733a4fe"
+    },
+    {
+      "id": "6adfe8be4f19ba00073371d2",
+      "title": "Camiseta VM Stamp PLUS SIZE",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe8be4f19ba00073371d4",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-480.webp",
+            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-960.webp"
+          }
+        },
+        {
+          "id": "6adfe8be4f19ba00073371d5",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-480.webp",
+            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-960.webp"
+          }
+        },
+        {
+          "id": "6adfe8be4f19ba00073371d6",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-480.webp",
+            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-960.webp"
+          }
+        },
+        {
+          "id": "6adfe8be4f19ba00073371d7",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-480.webp",
+            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adfe8be4f19ba00073371d2"
+    },
+    {
+      "id": "6adfe87b4f19ba00073371c3",
+      "title": "Camiseta VM Stamp",
+      "available": true,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe87b4f19ba00073371c5",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-480.webp",
+            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-960.webp"
+          }
+        },
+        {
+          "id": "6adfe87b4f19ba00073371c6",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-480.webp",
+            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-960.webp"
+          }
+        },
+        {
+          "id": "6adfe87b4f19ba00073371c7",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-480.webp",
+            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-960.webp"
+          }
+        },
+        {
+          "id": "6adfe87b4f19ba00073371c8",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-480.webp",
+            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adfe87b4f19ba00073371c3"
+    },
+    {
+      "id": "6adfe80d4f19ba00073371b2",
+      "title": "Camiseta VM Riqueza PLUS SIZE",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe80d4f19ba00073371b4",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-480.webp",
+            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-960.webp"
+          }
+        },
+        {
+          "id": "6adfe80d4f19ba00073371b5",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-480.webp",
+            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-960.webp"
+          }
+        },
+        {
+          "id": "6adfe80d4f19ba00073371b6",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-480.webp",
+            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-960.webp"
+          }
+        },
+        {
+          "id": "6adfe80d4f19ba00073371b7",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-480.webp",
+            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adfe80d4f19ba00073371b2"
+    },
+    {
+      "id": "6adfe7b74f19ba0007337192",
+      "title": "Camiseta VM Riqueza",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe7b74f19ba0007337194",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-480.webp",
+            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7b74f19ba0007337195",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-480.webp",
+            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7b74f19ba0007337196",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-480.webp",
+            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7b74f19ba0007337197",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-480.webp",
+            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adfe7b74f19ba0007337192"
+    },
+    {
+      "id": "6adfe7434f19ba000733716c",
+      "title": "Camiseta VM Do Morro PLUS SIZE",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe7434f19ba000733716e",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7434f19ba000733716f",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7434f19ba0007337170",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7434f19ba0007337171",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7434f19ba0007337172",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-960.webp"
+          }
+        },
+        {
+          "id": "6adfe7434f19ba0007337173",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-480.webp",
+            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adfe7434f19ba000733716c"
+    },
+    {
+      "id": "6adf8df54f19ba00073360df",
+      "title": "Camiseta VM Authentic",
+      "available": false,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Suedine",
+        "Gramatura": "240g",
+        "Fio": "30.1 penteado"
+      },
+      "measures": {
+        "header": "Comprimento, largura, ombro a ombro, manga",
+        "rows": [
+          "P: 76cm x 60cm x 55cm x 27cm",
+          "M: 78cm x 62cm x 56cm x 28cm",
+          "G: 80xm x 64cm x 57cm x 29cm",
+          "GG: 82cm x 66cm x 58cm x 30cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Preta C/ Logo Preta",
+        "Preta C/ Logo Branca"
+      ],
+      "images": [
+        {
+          "id": "6adf8df54f19ba00073360e1",
+          "width": 966,
+          "height": 764,
+          "srcset": {
+            "480": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-480.webp",
+            "960": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-960.webp"
+          }
+        },
+        {
+          "id": "6adf8df54f19ba00073360e2",
+          "width": 966,
+          "height": 764,
+          "srcset": {
+            "480": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-480.webp",
+            "960": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6adf8df54f19ba00073360df"
+    },
+    {
+      "id": "6a88fa154f19ba0008b0fa11",
+      "title": "Camiseta VM Authentic PLUS SIZE",
+      "available": false,
+      "category": "Lançamentos",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Suedine",
+        "Gramatura": "240g",
+        "Fio": "30.1 penteado"
+      },
+      "measures": {
+        "header": "Comprimento, largura, ombro a ombro, manga",
+        "rows": [
+          "G1: 84cm x 71cm x 60cm x 31cm",
+          "G2: 86cm x 76cm x 62cm x 32cm",
+          "G3: 88cm x 81cm x 64cm x 33cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Off white"
+      ],
+      "images": [
+        {
+          "id": "6adf8ee74f19ba000733614a",
+          "width": 966,
+          "height": 764,
+          "srcset": {
+            "480": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-480.webp",
+            "960": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-960.webp"
+          }
+        },
+        {
+          "id": "6adf8ee74f19ba000733614b",
+          "width": 966,
+          "height": 764,
+          "srcset": {
+            "480": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-480.webp",
+            "960": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6a88fa154f19ba0008b0fa11"
+    },
+    {
+      "id": "6a88f5e04f19ba0008b0f9a7",
+      "title": "Camiseta VM Kiss me",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfd9ae4f19ba0007336e90",
+          "width": 897,
+          "height": 696,
+          "srcset": {
+            "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-480.webp",
+            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-960.webp"
+          }
+        },
+        {
+          "id": "6adfd9ae4f19ba0007336e91",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-480.webp",
+            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-960.webp"
+          }
+        },
+        {
+          "id": "6adfd9ae4f19ba0007336e92",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-480.webp",
+            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-960.webp"
+          }
+        },
+        {
+          "id": "6adfd9ae4f19ba0007336e93",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-480.webp",
+            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/6a88f5e04f19ba0008b0f9a7"
+    },
+    {
+      "id": "69d867894f19ba0008dff478",
+      "title": "Camiseta VM Kiss Me PLUS SIZE",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfdc3a4f19ba0007336ed6",
+          "width": 897,
+          "height": 696,
+          "srcset": {
+            "480": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-480.webp",
+            "960": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-960.webp"
+          }
+        },
+        {
+          "id": "6adfdc4c4f19ba0007336ee9",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-480.webp",
+            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-960.webp"
+          }
+        },
+        {
+          "id": "6adfdc4c4f19ba0007336eea",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-480.webp",
+            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-960.webp"
+          }
+        },
+        {
+          "id": "6adfdc4c4f19ba0007336eeb",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-480.webp",
+            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/69d867894f19ba0008dff478"
+    },
+    {
+      "id": "69d867394f19ba0008dff469",
+      "title": "Camiseta VM Urban",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "P: 55 a 58cm x 72 a 74cm",
+          "M: 58 a 60cm x 73 a 75cm",
+          "G: 60 a 62cm x 75 a 77cm",
+          "GG: 62 a 64cm x 76 a 78cm"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG"
+      ],
+      "colors": [
+        "Off white"
+      ],
+      "images": [
+        {
+          "id": "6adfe5b94f19ba00073370f5",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-480.webp",
+            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-960.webp"
+          }
+        },
+        {
+          "id": "6adfe5b94f19ba00073370f6",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-480.webp",
+            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-960.webp"
+          }
+        },
+        {
+          "id": "6adfe5b94f19ba00073370f7",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-480.webp",
+            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-960.webp"
+          }
+        },
+        {
+          "id": "6adfe5b94f19ba00073370f8",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-480.webp",
+            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/69d867394f19ba0008dff469"
+    },
+    {
+      "id": "69d8462a4f19ba0008dfeeaf",
+      "title": "Camiseta VM Urban PLUS SIZE",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
+      "specs": {
+        "Modelagem": "Oversized",
+        "Composição": "100% algodão",
+        "Malha": "Penteada",
+        "Gramatura": "180g",
+        "Fio": "26.1"
+      },
+      "measures": {
+        "header": "Largura x Comprimento",
+        "rows": [
+          "G1: 66 a 68cm x 80 a 82cm",
+          "G2: 68 a 70cm x 82 a 84cm",
+          "G3: 70 a 72cm x 84 a 86cm"
+        ]
+      },
+      "sizes": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe6374f19ba000733711c",
+          "width": 950,
+          "height": 737,
+          "srcset": {
+            "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-480.webp",
+            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6374f19ba000733711d",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-480.webp",
+            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6374f19ba000733711e",
+          "width": 968,
+          "height": 742,
+          "srcset": {
+            "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-480.webp",
+            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6374f19ba000733711f",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-480.webp",
+            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/69d8462a4f19ba0008dfeeaf"
+    },
+    {
+      "id": "69d845c24f19ba0008dfee99",
+      "title": "Camiseta VM Do Morro",
+      "available": true,
+      "category": "Camisetas",
+      "intro": "Tamanho M - 74cm altura x 58cm largura",
+      "specs": {},
+      "measures": {
+        "header": "",
+        "rows": [
+          "Tamanho M - 74cm altura x 58cm largura",
+          "Tamanho G - 76cm altura x 60cm largura",
+          "Tamanho GG - 78cm altura x 62cm largura"
+        ]
+      },
+      "sizes": [
+        "M",
+        "G",
+        "GG",
+        "P"
+      ],
+      "colors": [
+        "Off white",
+        "Preta"
+      ],
+      "images": [
+        {
+          "id": "6adfe6d74f19ba0007337132",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6d74f19ba0007337133",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6d74f19ba0007337134",
+          "width": 970,
+          "height": 739,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6d74f19ba0007337135",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6d74f19ba0007337136",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-960.webp"
+          }
+        },
+        {
+          "id": "6adfe6d74f19ba0007337137",
+          "width": 974,
+          "height": 733,
+          "srcset": {
+            "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-480.webp",
+            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-960.webp"
+          }
+        }
+      ],
+      "catalogUrl": "https://meucatalogo.app/vistamorro/product/69d845c24f19ba0008dfee99"
+    }
+  ]
+}
