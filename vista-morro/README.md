@@ -56,3 +56,14 @@ Instrument Serif, IBM Plex Mono).
 
 Acessibilidade: navegação completa por teclado na arara (setas/Home/End/Enter), `<dialog>` nativo com
 foco gerenciado, link para pular ao conteúdo, `prefers-reduced-motion` respeitado em Motion, GSAP e CSS.
+
+## Ambiente de testes (Vercel)
+
+O projeto Vercel `vista-morro-preview` está ligado a este repositório (raiz `vista-morro`, Vite, saída `dist`).
+
+- Cada push na branch `claude/vista-morro-website-wo88gt` gera um deploy de **Preview** automaticamente, pelo
+  app da Vercel no GitHub (não depende de token de API).
+- O endereço fixo da branch sempre aponta para o deploy mais recente dessa branch.
+- Outras branches e builds de produção são ignorados pelo *Ignored Build Step* do projeto.
+- Previews são públicos e não indexados: cabeçalho `X-Robots-Tag: noindex` da Vercel e
+  `<meta name="robots" content="noindex, nofollow">` inserido no build quando `VERCEL_ENV=preview`.
