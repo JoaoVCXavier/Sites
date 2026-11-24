@@ -10,6 +10,8 @@ import { easeOutExpo } from '../lib/ease'
 const heroModel = findModel('do-morro')
 // Foto oficial da VM Do Morro off-white (estampa monocromática) — contrasta com o fundo preto.
 const heroImage = heroModel?.regular.images[3] ?? heroModel?.hero
+/** ponto de fixação da corda, bem acima da peça: centro do pêndulo */
+const PIVOT = '50% -45vh'
 
 function Letters({ word, delay }: { word: string; delay: number }) {
   return (
@@ -62,7 +64,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
       />
       <div aria-hidden="true" className="grain -z-10" />
 
-      <div className="mx-auto flex w-full max-w-[1600px] items-start justify-between px-4 sm:px-8" data-hero="fade">
+      <div className="relative z-20 mx-auto flex w-full max-w-[1600px] items-start justify-between px-4 sm:px-8" data-hero="fade">
         <motion.p
           className="label text-smoke"
           initial={{ opacity: 0, y: 10 }}
@@ -84,10 +86,11 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
       </div>
 
       {/* Composição central: VISTA / peça pendurada / MORRO */}
-      <div className="relative flex flex-1 flex-col justify-center gap-4 py-6 sm:gap-0">
+      <div className="relative flex flex-1 flex-col justify-center gap-5 py-4 sm:gap-0 sm:py-6">
         <h1
           id="hero-title"
-          className="display relative z-0 mx-auto flex w-full max-w-[1600px] flex-col px-3 text-[clamp(5.5rem,26vw,24rem)] leading-[0.8] sm:px-6"
+          // no celular a peça fica abaixo do título: as letras passam à frente da corda (sm+: a peça fica à frente)
+          className="display relative z-20 mx-auto sm:z-0 flex w-full max-w-[1600px] flex-col px-3 text-[clamp(5.5rem,26vw,24rem)] leading-[0.8] sm:px-6"
         >
           <span className="sr-only">Vista Morro</span>
           <span data-hero="vista" className="self-start">
@@ -101,22 +104,29 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
         {heroImage && (
           <div
             data-hero="garment"
-            className="pointer-events-none relative z-10 mx-auto mt-2 w-[min(60vw,17rem)] sm:absolute sm:inset-x-0 sm:top-0 sm:mt-0 sm:w-[min(34vw,30rem)]"
+            className="pointer-events-none relative z-10 mx-auto mt-2 w-[min(80vw,22rem)] sm:absolute sm:inset-x-0 sm:top-0 sm:mt-0 sm:w-[min(34vw,30rem)]"
           >
+            {/*
+              Entrada original recuperada (fe0451c): a peça desce do alto e balança numa mola pouco amortecida.
+              O pivô agora fica no alto da corda (fora da tela), não na gola: a peça oscila como pêndulo
+              e a corda acompanha sem "dobrar" no ponto de amarração.
+            */}
             <motion.div
-              className="origin-top"
-              initial={reduced ? false : { y: '-115%', rotate: -9 }}
+              style={{ transformOrigin: PIVOT }}
+              initial={reduced ? false : { y: '-115%', rotate: -6 }}
               animate={{ y: '0%', rotate: 0 }}
               transition={{
                 y: { duration: 1.4, ease: easeOutExpo, delay: 0.55 },
                 rotate: { type: 'spring', stiffness: 38, damping: 3.2, mass: 1.1, delay: 0.9 },
               }}
             >
-              <div className="origin-top motion-safe:animate-[vm-sway_8s_ease-in-out_infinite]">
-                <div aria-hidden="true" className="mx-auto hidden h-[12vh] w-px bg-gradient-to-b from-transparent to-[#8a8884] sm:block" />
+              <div style={{ transformOrigin: PIVOT }} className="motion-safe:animate-[vm-sway_8s_ease-in-out_infinite]">
+                {/* espaço da corda acima da peça (a corda em si vem do HangingGarment e segue até o topo) */}
+                <div aria-hidden="true" className="hidden h-[12vh] sm:block" />
                 <HangingGarment
                   image={heroImage}
-                  alt={`${heroModel?.fullName ?? 'Camiseta Vista Morro'} na cor off-white, pendurada em um cabide`}
+                  suspension="cord"
+                  alt={`${heroModel?.fullName ?? 'Camiseta Vista Morro'} na cor off-white, suspensa por uma corda`}
                   sizes="(max-width: 640px) 60vw, 34vw"
                   priority
                 />
@@ -128,23 +138,12 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
 
       <div data-hero="fade">
       <motion.div
-        className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-end gap-5 px-4 pb-6 sm:grid-cols-3 sm:gap-6 sm:px-8 sm:pb-10"
+        className="mx-auto grid w-full max-w-[1600px] grid-cols-1 items-end gap-5 px-4 pb-6 sm:grid-cols-2 sm:gap-6 sm:px-8 sm:pb-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.25, ease: easeOutExpo }}
       >
         <p className="editorial text-[clamp(1.75rem,3.4vw,3rem)] leading-none">{brand.signature}</p>
-
-        <a
-          href="#vitrine"
-          className="label group hidden flex-col items-center gap-3 justify-self-center text-smoke sm:flex"
-          aria-label="Role até a vitrine"
-        >
-          <span>Role</span>
-          <span aria-hidden="true" className="relative block h-12 w-px overflow-hidden bg-line">
-            <span className="absolute inset-0 bg-paper motion-safe:animate-[vm-scroll-cue_2.2s_var(--ease-in-out-quart)_infinite]" />
-          </span>
-        </a>
 
         <div className="sm:justify-self-end">
           <button
@@ -152,7 +151,7 @@ export function Hero({ onExplore }: { onExplore: () => void }) {
             onClick={onExplore}
             className="group label inline-flex h-14 items-center gap-4 whitespace-nowrap rounded-full bg-paper pr-2 pl-6 text-ink transition-transform duration-500 hover:scale-[1.03] active:scale-[0.98]"
           >
-            Explorar coleções
+            Ver a arara
             <span className="grid size-10 place-items-center rounded-full bg-ink text-paper transition-transform duration-500 group-hover:rotate-[-45deg]">
               <ArrowDown className="size-4" aria-hidden="true" />
             </span>

@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { ArrowLeft, ArrowRight, Maximize2, X } from 'lucide-react'
-import { asset, findModel, srcSet } from '../data/catalog'
+import { asset, findModel, srcAtLeast, srcSet } from '../data/catalog'
 import type { Model, ProductImage } from '../data/types'
-import { SectionLabel } from '../components/SectionLabel'
 import { gsap, prefersReducedMotion, ScrollTrigger } from '../lib/gsap'
 import { easeOutExpo } from '../lib/ease'
 
@@ -19,35 +18,35 @@ const TILES: {
   aspect: string
   detail?: { scale: number; origin: string }
 }[] = [
-  { slug: 'do-morro', image: 1, panel: '#d9d5cc', layout: 'lg:col-span-7 lg:row-span-2', aspect: 'aspect-[4/5]' },
-  { slug: 'kiss-me', image: 2, panel: '#1b1b1a', layout: 'lg:col-span-5 lg:mt-24', aspect: 'aspect-square' },
+  { slug: 'do-morro', image: 1, panel: '#d9d5cc', layout: 'lg:col-span-7 lg:row-span-2', aspect: 'lg:aspect-[4/5]' },
+  { slug: 'kiss-me', image: 2, panel: '#1b1b1a', layout: 'lg:col-span-5 lg:mt-24', aspect: 'lg:aspect-square' },
   {
     slug: 'stamp',
     image: 1,
     panel: '#e9e6df',
     layout: 'lg:col-span-5',
-    aspect: 'aspect-[5/4]',
-    detail: { scale: 2.1, origin: '50% 46%' },
+    aspect: 'lg:aspect-[5/4]',
+    detail: { scale: 1.6, origin: '50% 46%' },
   },
-  { slug: 'angel', image: 0, panel: '#121211', layout: 'lg:col-span-4', aspect: 'aspect-[3/4]' },
+  { slug: 'angel', image: 0, panel: '#121211', layout: 'lg:col-span-4', aspect: 'lg:aspect-[3/4]' },
   {
     slug: 'riqueza',
     image: 1,
     panel: '#cfcac0',
     layout: 'lg:col-span-4 lg:mt-20',
-    aspect: 'aspect-[3/4]',
-    detail: { scale: 1.75, origin: '50% 38%' },
+    aspect: 'lg:aspect-[3/4]',
+    detail: { scale: 1.45, origin: '50% 38%' },
   },
-  { slug: 'urban', image: 0, panel: '#e9e6df', layout: 'lg:col-span-4', aspect: 'aspect-[3/4]' },
+  { slug: 'urban', image: 0, panel: '#e9e6df', layout: 'lg:col-span-4', aspect: 'lg:aspect-[3/4]' },
   {
     slug: 'authentic',
     image: 1,
     panel: '#bdb8ae',
     layout: 'lg:col-span-6',
-    aspect: 'aspect-[16/11]',
-    detail: { scale: 1.9, origin: '18% 40%' },
+    aspect: 'lg:aspect-[16/11]',
+    detail: { scale: 1.5, origin: '22% 40%' },
   },
-  { slug: 'money-run', image: 0, panel: '#1b1b1a', layout: 'lg:col-span-6 lg:mt-16', aspect: 'aspect-[16/11]' },
+  { slug: 'money-run', image: 0, panel: '#1b1b1a', layout: 'lg:col-span-6 lg:mt-16', aspect: 'lg:aspect-[16/11]' },
 ]
 
 interface Shot {
@@ -61,6 +60,9 @@ const shots: Shot[] = TILES.flatMap((tile) => {
   const image = model?.regular.images[tile.image] ?? model?.hero
   return model && image ? [{ model, image, tile }] : []
 })
+
+/** No celular (2 colunas): uma foto larga a cada três; a última nunca fica sozinha pela metade. */
+const wide = (i: number) => i % 3 === 0 || (i === shots.length - 1 && i % 3 === 1)
 
 export function Lookbook() {
   const root = useRef<HTMLElement>(null)
@@ -85,10 +87,11 @@ export function Lookbook() {
             { yPercent: 7, ease: 'none', scrollTrigger: { trigger: tile, start: 'top bottom', end: 'bottom top', scrub: true } },
           )
       })
-      gsap.fromTo(
+      if (window.matchMedia('(min-width: 768px)').matches)
+        gsap.fromTo(
         '[data-lookbook-title]',
-        { xPercent: 6 },
-        { xPercent: -6, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: true } },
+        { xPercent: 3 },
+        { xPercent: -1.5, ease: 'none', scrollTrigger: { trigger: root.current, start: 'top bottom', end: 'bottom top', scrub: true } },
       )
     }, root)
     return () => ctx.revert()
@@ -97,31 +100,28 @@ export function Lookbook() {
   return (
     <section id="lookbook" ref={root} aria-labelledby="lookbook-title" className="relative overflow-hidden bg-ink py-24 text-paper sm:py-36">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-8">
-        <SectionLabel index="03" className="text-smoke">
-          Fotos oficiais
-        </SectionLabel>
         <h2
           id="lookbook-title"
           data-lookbook-title
-          className="display mt-4 text-[clamp(4rem,17vw,16rem)] whitespace-nowrap"
+          className="display text-[clamp(4rem,17vw,15rem)] whitespace-nowrap"
         >
           Lookbook
         </h2>
         <div className="mt-6 grid gap-6 sm:mt-10 lg:grid-cols-2">
           <p className="editorial max-w-xl text-2xl leading-snug text-paper/85 sm:text-3xl">
-            As peças em detalhe — estampas, cores e acabamentos, a partir das fotos oficiais do catálogo.
+            Estampa, cor e acabamento de perto. Todas as fotos são as oficiais da marca.
           </p>
         </div>
 
         <ul className="mt-16 grid grid-cols-2 gap-3 sm:gap-5 lg:mt-24 lg:grid-cols-12 lg:gap-6">
           {shots.map((shot, i) => (
-            <li key={shot.tile.slug} className={`${i % 3 === 0 ? 'col-span-2' : 'col-span-1'} ${shot.tile.layout}`}>
+            <li key={shot.tile.slug} className={`${wide(i) ? 'col-span-2' : 'col-span-1'} ${shot.tile.layout}`}>
               <figure>
                 <button
                   type="button"
                   data-tile
                   onClick={() => setOpen(i)}
-                  className={`group relative block w-full overflow-hidden rounded-sm ${shot.tile.aspect} ${
+                  className={`group relative block w-full overflow-hidden rounded-sm ${wide(i) ? 'aspect-[4/3]' : 'aspect-[4/5]'} ${shot.tile.aspect} ${
                     i === 0 ? 'lg:aspect-auto lg:h-full lg:min-h-[44rem]' : ''
                   }`}
                   style={{ backgroundColor: shot.tile.panel }}
@@ -129,7 +129,7 @@ export function Lookbook() {
                 >
                   <div data-parallax className="absolute -inset-y-[8%] inset-x-0">
                     <img
-                      src={asset(shot.image.srcset['960'])}
+                      src={asset(srcAtLeast(shot.image, 720))}
                       srcSet={srcSet(shot.image)}
                       sizes="(max-width: 1024px) 50vw, 40vw"
                       width={shot.image.width}
@@ -152,7 +152,7 @@ export function Lookbook() {
                 <figcaption className="label mt-3 flex items-baseline justify-between gap-3 text-smoke">
                   <span>
                     <span className="text-paper">{shot.model.fullName.replace(/^Camiseta\s+/i, '')}</span>
-                    {shot.tile.detail && ' · detalhe'}
+                    {shot.tile.detail && <span className="hidden sm:inline"> · detalhe</span>}
                   </span>
                   <span className="tabular-nums">{String(i + 1).padStart(2, '0')}</span>
                 </figcaption>
@@ -191,7 +191,7 @@ function Lightbox({ index, onIndex, onClose }: { index: number; onIndex: (i: num
   return (
     <dialog
       ref={ref}
-      aria-label={`Lookbook — ${shot.model.fullName}`}
+      aria-label={`Lookbook: ${shot.model.fullName}`}
       onCancel={(e) => {
         e.preventDefault()
         onClose()
@@ -214,7 +214,7 @@ function Lightbox({ index, onIndex, onClose }: { index: number; onIndex: (i: num
       <div className="pointer-events-none absolute inset-0 flex flex-col p-4 sm:p-8">
         <div className="pointer-events-auto flex items-center justify-between">
           <p className="label">
-            {String(index + 1).padStart(2, '0')} / {String(shots.length).padStart(2, '0')} —{' '}
+            {String(index + 1).padStart(2, '0')} / {String(shots.length).padStart(2, '0')} ·{' '}
             <span className="text-smoke">{shot.model.fullName}</span>
           </p>
           <button
@@ -232,12 +232,12 @@ function Lightbox({ index, onIndex, onClose }: { index: number; onIndex: (i: num
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.img
               key={shot.image.id}
-              src={asset(shot.image.srcset['960'])}
+              src={asset(srcAtLeast(shot.image, 720))}
               srcSet={srcSet(shot.image)}
               sizes="90vw"
               width={shot.image.width}
               height={shot.image.height}
-              alt={`${shot.model.fullName} — foto oficial`}
+              alt={`${shot.model.fullName}, foto oficial`}
               className="absolute inset-0 m-auto max-h-[86%] w-auto max-w-[92%] object-contain"
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}

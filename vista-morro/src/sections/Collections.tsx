@@ -4,7 +4,6 @@ import { ArrowUpRight } from 'lucide-react'
 import { collections, findModel, models } from '../data/catalog'
 import type { CollectionId } from '../data/types'
 import { HangingGarment } from '../components/HangingGarment'
-import { SectionLabel } from '../components/SectionLabel'
 import { useReveal } from '../lib/useReveal'
 import { easeOutExpo } from '../lib/ease'
 
@@ -39,16 +38,11 @@ export function Collections({ onExplore }: { onExplore: (id: CollectionId) => vo
     >
       <div className="mx-auto max-w-[1600px] px-4 sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_minmax(0,28rem)] lg:items-end">
-          <div>
-            <SectionLabel index="02" className="text-ash">
-              Categorias do catálogo
-            </SectionLabel>
-            <h2 id="colecoes-title" className="display mt-4 text-[clamp(3.5rem,11vw,9.5rem)]" data-reveal>
-              Coleções
-            </h2>
-          </div>
+          <h2 id="colecoes-title" className="display text-[clamp(3.5rem,11vw,9rem)]" data-reveal>
+            Coleções
+          </h2>
           <p className="editorial text-2xl leading-snug text-ink/80 sm:text-3xl" data-reveal>
-            {models.length} modelos publicados no catálogo oficial. Escolha uma coleção para vê-la na arara.
+            {models.length} desenhos na loja. Escolha uma coleção e ela vai para a arara.
           </p>
         </div>
 
@@ -58,7 +52,7 @@ export function Collections({ onExplore }: { onExplore: (id: CollectionId) => vo
           onPointerMove={onMove}
           onPointerLeave={() => setHovered(null)}
         >
-          {collections.map((c, i) => {
+          {collections.map((c) => {
             const list = models.filter(c.filter)
             return (
               <li key={c.id} className="border-b border-line-ink" data-reveal>
@@ -68,22 +62,17 @@ export function Collections({ onExplore }: { onExplore: (id: CollectionId) => vo
                   onPointerEnter={(e) => e.pointerType === 'mouse' && setHovered(c.id)}
                   onFocus={() => setHovered(c.id)}
                   onBlur={() => setHovered(null)}
-                  className="group grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-4 gap-y-3 py-8 text-left sm:gap-x-10 sm:py-12 lg:grid-cols-[6rem_1fr_minmax(0,22rem)_auto]"
+                  className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-3 py-8 text-left sm:gap-x-10 sm:py-12 lg:grid-cols-[1fr_minmax(0,22rem)_auto]"
                 >
-                  <span aria-hidden="true" className="label self-start pt-2 text-ash tabular-nums sm:pt-4">
-                    0{i + 1}
-                  </span>
-                  <span className="display text-[clamp(2.25rem,11vw,8rem)] transition-[font-stretch,letter-spacing] duration-700 ease-[var(--ease-out-expo)] group-hover:tracking-[0.01em] [font-stretch:62%] group-hover:[font-stretch:80%]">
+                  <span className="display text-[clamp(2.25rem,10vw,7rem)] transition-[font-variation-settings,letter-spacing] duration-700 ease-[var(--ease-out-expo)] group-hover:tracking-[0.005em] group-hover:[font-variation-settings:'wdth'_100,'wght'_800,'opsz'_96]">
                     {c.title}
                   </span>
-                  <span className="col-span-3 col-start-1 flex flex-col gap-2 text-ink/75 sm:col-start-2 lg:col-span-1 lg:col-start-3">
-                    <span className="label text-ash">
-                      {c.kicker} · {list.length} modelos
-                    </span>
+                  <span className="col-span-2 col-start-1 flex flex-col gap-2 text-ink/75 lg:col-span-1 lg:col-start-2 lg:row-start-1">
+                    <span className="label text-ash">{list.length} desenhos</span>
                     <span className="text-base leading-relaxed">{c.description}</span>
                     <span className="text-sm text-ash">{list.map((m) => m.name).join(' · ')}</span>
                   </span>
-                  <span className="col-start-3 row-start-1 grid size-12 place-items-center rounded-full border border-line-ink transition-all duration-500 group-hover:bg-ink group-hover:text-paper sm:size-16 lg:col-start-4">
+                  <span className="col-start-2 row-start-1 grid size-12 place-items-center rounded-full border border-line-ink transition-colors duration-300 group-hover:bg-ink group-hover:text-paper sm:size-16 lg:col-start-3">
                     <ArrowUpRight className="size-5 transition-transform duration-500 group-hover:rotate-45" aria-hidden="true" />
                   </span>
                 </button>

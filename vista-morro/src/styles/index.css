@@ -1,8 +1,15 @@
-@import '@fontsource-variable/archivo/wdth.css';
-@import '@fontsource/instrument-serif/latin-400-italic.css';
-@import '@fontsource/ibm-plex-mono/latin-400.css';
-@import '@fontsource/ibm-plex-mono/latin-500.css';
+/*
+ * Tipografia (OFL, self-hosted, font-display: swap):
+ * - Bricolage Grotesque: voz da marca. Pesada e condensada nos títulos (cartaz de rua, ink traps),
+ *   larga e média nas frases da marca.
+ * - Instrument Sans: menus, preços, tamanhos, textos e botões.
+ */
+@import '@fontsource-variable/bricolage-grotesque/standard.css';
+@import '@fontsource-variable/instrument-sans/wdth.css';
 @import 'tailwindcss';
+
+/* celular deitado: pouca altura útil, a composição precisa caber numa tela */
+@custom-variant short (@media (orientation: landscape) and (max-height: 520px));
 
 /*
  * Vista Morro — tokens
@@ -15,18 +22,18 @@
   --color-ink-3: #1a1a19;
   --color-paper: #f4f3f0;
   --color-paper-2: #e9e7e1;
-  --color-smoke: #a3a3a3;
-  --color-ash: #5f5f5d;
+  --color-smoke: #a8a7a3;
+  --color-ash: #5c5b58;
   --color-line: rgb(244 243 240 / 0.14);
   --color-line-ink: rgb(8 8 8 / 0.14);
 
-  --font-display: 'Archivo Variable', 'Arial Narrow', system-ui, sans-serif;
-  --font-sans: 'Archivo Variable', system-ui, sans-serif;
-  --font-serif: 'Instrument Serif', 'Times New Roman', serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Bricolage Grotesque Variable', 'Arial Narrow', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans Variable', system-ui, sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 
   --breakpoint-xs: 420px;
 }
@@ -36,12 +43,15 @@
     background: var(--color-ink);
     color: var(--color-paper);
     font-family: var(--font-sans);
-    font-stretch: 100%;
+    font-size: 100%;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
     scroll-padding-top: 4.5rem;
+    scrollbar-color: var(--color-ash) var(--color-ink);
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -57,6 +67,16 @@
 
   body {
     min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   ::selection {
@@ -83,32 +103,61 @@
   dialog::backdrop {
     background: transparent;
   }
+
+  /* Botões e links pressionáveis respondem ao toque (feedback imediato, sem atraso). */
+  button:not(:disabled),
+  a {
+    transition-property: transform, color, background-color, border-color, opacity;
+    transition-duration: 160ms;
+    transition-timing-function: var(--ease-out);
+  }
 }
 
 @layer components {
-  /* Título de impacto: Archivo extra-condensada */
+  /* Título de impacto: Bricolage condensada, peso máximo, tamanho óptico de cartaz. */
   .display {
     font-family: var(--font-display);
-    font-stretch: 62%;
+    font-stretch: 75%;
     font-weight: 800;
-    line-height: 0.86;
-    letter-spacing: -0.01em;
+    /* eixos explícitos: o WebKit não deriva wdth/wght de font-stretch/font-weight em todas as versões */
+    font-variation-settings: 'wdth' 75, 'wght' 800, 'opsz' 96;
+    line-height: 0.88;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
   }
 
-  .label {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    line-height: 1.4;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
+  /* Voz da marca: frases e textos de apoio grandes. */
   .editorial {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-family: var(--font-display);
+    font-stretch: 100%;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-variation-settings: 'wdth' 100, 'wght' 500;
+    letter-spacing: -0.022em;
+    line-height: 1.08;
+  }
+
+  /* Rótulos curtos (menus, botões, metadados). */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 100, 'wght' 600;
+    line-height: 1.35;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums lining-nums;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 100, 'wght' 600;
+    letter-spacing: -0.005em;
+  }
+
+  .press:active:not(:disabled) {
+    transform: scale(0.97);
   }
 
   /* Monograma oficial usado como máscara — herda a cor do texto. */
@@ -147,20 +196,10 @@
 @keyframes vm-sway {
   0%,
   100% {
-    transform: rotate(-0.7deg);
+    transform: rotate(-0.6deg);
   }
   50% {
-    transform: rotate(0.7deg);
-  }
-}
-
-@keyframes vm-scroll-cue {
-  0% {
-    transform: translateY(-100%);
-  }
-  60%,
-  100% {
-    transform: translateY(100%);
+    transform: rotate(0.6deg);
   }
 }
 

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'motion/react'
-import { ArrowUpRight } from 'lucide-react'
+import { ShoppingBag } from 'lucide-react'
 import { brand, nav } from '../data/brand'
 import { easeInOutQuart, easeOutExpo } from '../lib/ease'
+import { useCart, useCartActions } from '../commerce/cartContext'
+import { contactLink } from '../commerce/fromCatalog'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -10,6 +12,18 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
   const menuButton = useRef<HTMLButtonElement>(null)
+  const { totals } = useCart()
+  const { openCart } = useCartActions()
+  const units = totals.units
+  const whatsapp = contactLink()
+
+  // Peça adicionada: o header (que se esconde ao rolar para baixo) volta a aparecer,
+  // para o contador animado ficar à vista e a sacola continuar a um toque — essencial no celular.
+  const lastUnits = useRef(units)
+  useEffect(() => {
+    if (units > lastUnits.current) setHidden(false)
+    lastUnits.current = units
+  }, [units])
 
   useMotionValueEvent(scrollY, 'change', (y) => {
     const delta = y - (scrollY.getPrevious() ?? 0)
@@ -56,12 +70,12 @@ export function Header() {
       >
         <div
           className={`absolute inset-0 -z-10 transition-opacity duration-500 ${
-            scrolled && !open ? 'opacity-100' : 'opacity-0'
-          } bg-ink/70 backdrop-blur-md`}
+            open ? 'opacity-0' : 'opacity-100'
+          } ${scrolled ? 'bg-ink/80 backdrop-blur-md' : 'bg-ink'}`}
           aria-hidden="true"
         />
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 text-paper sm:h-[4.5rem] sm:px-8">
-          <a href="#topo" className="group flex min-h-11 min-w-11 items-center gap-3" aria-label="Vista Morro — início">
+          <a href="#topo" className="group flex min-h-11 min-w-11 items-center gap-3" aria-label="Vista Morro, início">
             <span className="monogram h-9 transition-transform duration-500 group-hover:-rotate-6 sm:h-10" aria-hidden="true" />
             <span className="label hidden tracking-[0.22em] xs:inline">Vista Morro</span>
           </a>
@@ -70,7 +84,7 @@ export function Header() {
             <ul className="flex items-center gap-8">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="label link-underline pb-1 text-paper/80 transition-colors hover:text-paper">
+                  <a href={item.href} className="label inline-flex min-h-11 items-center text-paper/80 transition-colors hover:text-paper">
                     {item.label}
                   </a>
                 </li>
@@ -79,16 +93,33 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href={brand.links.catalog.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="label hidden min-h-11 items-center gap-2 rounded-full border border-line px-4 transition-colors hover:border-paper sm:inline-flex"
+            <button
+              id="botao-sacola"
+              type="button"
+              onClick={() => {
+                setOpen(false)
+                openCart()
+              }}
+              aria-label={units ? `Abrir sacola, ${units} ${units === 1 ? 'peça' : 'peças'}` : 'Abrir sacola, vazia'}
+              className="press relative z-[60] flex h-11 items-center gap-2 rounded-full border border-line pr-3 pl-3.5 hover:border-paper"
             >
-              Catálogo
-              <ArrowUpRight className="size-4" aria-hidden="true" />
-              <span className="sr-only">(abre em nova aba)</span>
-            </a>
+              <ShoppingBag className="size-[1.125rem]" strokeWidth={1.75} aria-hidden="true" />
+              <span className="label hidden sm:inline">Sacola</span>
+              <span className="relative grid h-5 min-w-5 place-items-center overflow-hidden rounded-full bg-paper px-1 text-ink">
+                <AnimatePresence mode="popLayout" initial={false}>
+                  <motion.span
+                    key={units}
+                    className="price block text-xs leading-none"
+                    initial={{ y: '110%' }}
+                    animate={{ y: '0%' }}
+                    exit={{ y: '-110%' }}
+                    transition={{ type: 'spring', stiffness: 520, damping: 34 }}
+                  >
+                    {units}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+            </button>
             <button
               ref={menuButton}
               type="button"
@@ -146,14 +177,39 @@ export function Header() {
               </ul>
             </nav>
             <motion.div
-              aria-hidden="true"
-              className="mt-8 flex items-end justify-between gap-4"
+              className="mt-8 flex flex-col gap-6"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { delay: 0.5 } }}
+              animate={{ opacity: 1, transition: { delay: 0.45 } }}
               exit={{ opacity: 0 }}
             >
-              <p className="editorial text-2xl">{brand.signature}</p>
-              <span className="monogram h-14 text-paper/80" aria-hidden="true" />
+              <ul className="flex flex-wrap gap-2">
+                <li>
+                  <a
+                    href={brand.links.instagram.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="label press inline-flex h-11 items-center rounded-full border border-line px-5 hover:border-paper"
+                  >
+                    Instagram<span className="sr-only"> (abre em nova aba)</span>
+                  </a>
+                </li>
+                {whatsapp && (
+                  <li>
+                    <a
+                      href={whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="label press inline-flex h-11 items-center rounded-full border border-line px-5 hover:border-paper"
+                    >
+                      Fale conosco<span className="sr-only"> pelo WhatsApp (abre em nova aba)</span>
+                    </a>
+                  </li>
+                )}
+              </ul>
+              <div className="flex items-end justify-between gap-4" aria-hidden="true">
+                <p className="editorial text-2xl">{brand.signature}</p>
+                <span className="monogram h-14 text-paper/80" />
+              </div>
             </motion.div>
           </motion.div>
         )}

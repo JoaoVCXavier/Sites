@@ -1,5 +1,6 @@
 import snapshot from './catalog.generated.json'
-import type { CatalogProduct, CatalogSnapshot, CollectionId, Model, ProductImage, Tone } from './types'
+import type { CatalogProduct, CatalogSnapshot, CollectionId, Model, ProductImage, Tone, Version } from './types'
+import type { CatalogLookup } from '../commerce/cart.ts'
 
 export const catalog = snapshot as CatalogSnapshot
 
@@ -56,10 +57,12 @@ function buildModels(products: CatalogProduct[]): Model[] {
     if (!regular || regular.images.length === 0) continue
     const c = curation[slug]
     const hero: ProductImage = regular.images[c?.image ?? 0] ?? regular.images[0]
+    const name = shortName(regular.title)
     models.push({
       slug,
-      name: shortName(regular.title),
-      fullName: regular.title.replace(PLUS, ''),
+      name,
+      // Nome de exibição consistente ("Kiss me" e "Kiss Me" aparecem no catálogo): "Camiseta VM Kiss Me"
+      fullName: `Camiseta VM ${name}`,
       category: regular.category,
       regular,
       // Versão Plus Size só conta se tiver fotos; um desenho só-Plus usa o mesmo produto nos dois campos.
@@ -82,7 +85,6 @@ export const models = buildModels(catalog.products)
 export const collections: {
   id: Exclude<CollectionId, 'todas'>
   title: string
-  kicker: string
   description: string
   filter: (m: Model) => boolean
   cover: string
@@ -90,24 +92,21 @@ export const collections: {
   {
     id: 'lancamentos',
     title: 'Lançamentos',
-    kicker: 'Categoria do catálogo',
-    description: 'Os modelos mais recentes publicados no catálogo oficial da marca.',
+    description: 'Os desenhos mais recentes da marca.',
     filter: (m) => m.category === 'Lançamentos',
     cover: 'stamp',
   },
   {
     id: 'camisetas',
     title: 'Camisetas',
-    kicker: 'Categoria do catálogo',
-    description: 'Camisetas oversized da linha principal do catálogo oficial.',
+    description: 'A linha principal de camisetas oversized.',
     filter: (m) => m.category === 'Camisetas',
     cover: 'kiss-me',
   },
   {
     id: 'plus-size',
     title: 'Plus Size',
-    kicker: 'Versões do catálogo',
-    description: 'Os mesmos desenhos também publicados em versão Plus Size.',
+    description: 'Os mesmos desenhos na modelagem Plus Size.',
     filter: (m) => m.plus !== null,
     cover: 'do-morro',
   },
@@ -121,21 +120,94 @@ export function modelsFor(id: CollectionId): Model[] {
 
 export const findModel = (slug: string) => models.find((m) => m.slug === slug)
 
+export const productFor = (model: Model, version: Version): CatalogProduct =>
+  version === 'plus' && model.plus ? model.plus : model.regular
+
+/* ---------- imagens ---------- */
+
 /** Resolve um caminho de /public respeitando o `base` do Vite. */
 export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
+const widthsOf = (img: ProductImage) =>
+  Object.keys(img.srcset)
+    .map(Number)
+    .sort((a, b) => a - b)
+
 export function srcSet(img: ProductImage) {
-  return Object.entries(img.srcset)
-    .map(([w, src]) => `${asset(src)} ${w}w`)
+  return widthsOf(img)
+    .map((w) => `${asset(img.srcset[w])} ${w}w`)
     .join(', ')
 }
 
-export const largestSrc = (img: ProductImage) => {
-  const widths = Object.keys(img.srcset).map(Number).sort((a, b) => b - a)
-  return asset(img.srcset[widths[0]])
+export const largestSrc = (img: ProductImage) => asset(img.srcset[widthsOf(img).at(-1)!])
+export const smallestSrc = (img: ProductImage) => asset(img.srcset[widthsOf(img)[0]])
+/** Menor arquivo com pelo menos `w` pixels de largura (ou o maior disponível). */
+export const srcAtLeast = (img: ProductImage, w: number) => {
+  const ws = widthsOf(img)
+  return img.srcset[ws.find((x) => x >= w) ?? ws.at(-1)!]
 }
 
-export const smallestSrc = (img: ProductImage) => {
-  const widths = Object.keys(img.srcset).map(Number).sort((a, b) => a - b)
-  return asset(img.srcset[widths[0]])
+/* ---------- variações ---------- */
+
+const SIZE_ORDER = ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG', 'G1', 'G2', 'G3', 'G4']
+
+/** Tamanhos exatamente como publicados, em ordem crescente (o catálogo os lista fora de ordem). */
+export const sortedSizes = (sizes: string[]) =>
+  [...sizes].sort((a, b) => {
+    const ia = SIZE_ORDER.indexOf(a.toUpperCase())
+    const ib = SIZE_ORDER.indexOf(b.toUpperCase())
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib)
+  })
+
+/**
+ * Linhas da tabela de medidas que correspondem aos tamanhos publicados.
+ * Quando a tabela do catálogo não bate com os tamanhos do produto (ex.: tabela P–GG num Plus Size),
+ * nenhuma linha é exibida — melhor omitir do que mostrar uma medida errada.
+ */
+export function measuresFor(product: CatalogProduct): { size: string; text: string }[] {
+  const out: { size: string; text: string }[] = []
+  for (const size of sortedSizes(product.sizes)) {
+    const row = product.measures.rows.find((r) => new RegExp(`^(Tamanho\\s+)?${size}\\b`, 'i').test(r))
+    if (row) out.push({ size, text: row.replace(new RegExp(`^(Tamanho\\s+)?${size}\\s*[:\\-–]?\\s*`, 'i'), '') })
+  }
+  return out.length === product.sizes.length ? out : []
 }
+
+const COLOR_TONES: [RegExp, ProductImage['tone']][] = [
+  [/off\s*-?\s*white|branc|cru|bege/i, 'light'],
+  [/pret|black|grafite|chumbo/i, 'dark'],
+]
+const toneOfColor = (color: string) => COLOR_TONES.find(([re]) => re.test(color))?.[1]
+
+/**
+ * Foto correspondente a uma cor, quando é possível saber com segurança: cada cor do produto precisa
+ * corresponder a um tom diferente (ex.: "Preta" × "Off white") e existir uma foto medida com esse tom.
+ * Em casos ambíguos ("Preta c/ logo preta" × "Preta c/ logo branca") devolve -1 e a galeria não muda.
+ */
+export function imageIndexForColor(product: CatalogProduct, color: string): number {
+  if (product.colors.length < 2) return -1
+  const tones = product.colors.map(toneOfColor)
+  if (tones.some((t) => !t) || new Set(tones).size !== tones.length) return -1
+  const tone = toneOfColor(color)
+  return product.images.findIndex((img) => img.tone === tone)
+}
+
+/* ---------- comercial ---------- */
+
+/** Ponte entre a sacola salva e o catálogo atual (preço, disponibilidade e opções vigentes). */
+export const catalogLookup: CatalogLookup = (productId) => {
+  const p = catalog.products.find((x) => x.id === productId)
+  if (!p) return undefined
+  const model = models.find((m) => m.regular.id === productId || m.plus?.id === productId)
+  return {
+    available: p.available,
+    priceCents: p.priceCents,
+    sizes: p.sizes,
+    colors: p.colors,
+    name: model?.fullName ?? p.title.replace(PLUS, ''),
+    images: p.images.flatMap((img) => Object.values(img.srcset)),
+    image: p.images[0] ? srcAtLeast(p.images[0], 240) : undefined,
+  }
+}
+
+export const whatsappNumber = catalog.store.whatsapp

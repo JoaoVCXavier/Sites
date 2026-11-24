@@ -3,11 +3,14 @@ import { AnimatePresence } from 'motion/react'
 import { Header } from './components/Header'
 import { Marquee } from './components/Marquee'
 import { ProductDialog } from './components/ProductDialog'
+import { CartDrawer } from './components/CartDrawer'
+import { CartProvider } from './commerce/CartProvider'
 import { Hero } from './sections/Hero'
 import { Showcase } from './sections/Showcase'
 import { Collections } from './sections/Collections'
 import { Lookbook } from './sections/Lookbook'
 import { About } from './sections/About'
+import { Instagram } from './sections/Instagram'
 import { Contact } from './sections/Contact'
 import { brand } from './data/brand'
 import type { CollectionId, Model } from './data/types'
@@ -37,11 +40,11 @@ export default function App() {
   }, [])
 
   return (
-    <>
+    <CartProvider>
       <Header />
       <div id="conteudo" tabIndex={-1} className="outline-none">
         <main>
-          <Hero onExplore={() => scrollToId('colecoes')} />
+          <Hero onExplore={() => scrollToId('vitrine')} />
           <Marquee
             items={[{ text: brand.signature }, { text: brand.descriptor, lang: 'en' }, { text: brand.name }]}
             className="display border-y border-ink bg-paper py-4 text-[clamp(2rem,5vw,4rem)] text-ink"
@@ -54,6 +57,7 @@ export default function App() {
           <Collections onExplore={exploreCollection} />
           <Lookbook />
           <About />
+          <Instagram />
         </main>
         <Contact />
       </div>
@@ -68,6 +72,7 @@ export default function App() {
           />
         )}
       </AnimatePresence>
-    </>
+      <CartDrawer />
+    </CartProvider>
   )
 }

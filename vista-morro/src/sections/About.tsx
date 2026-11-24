@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from 'react'
 import { brand } from '../data/brand'
-import { SectionLabel } from '../components/SectionLabel'
 import { gsap, prefersReducedMotion } from '../lib/gsap'
 import { useReveal } from '../lib/useReveal'
 
@@ -32,19 +31,15 @@ export function About() {
     <section id="sobre" ref={sectionRef} aria-labelledby="sobre-title" className="relative overflow-hidden bg-paper py-24 text-ink sm:py-36">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-8">
         <div className="flex items-start justify-between gap-6">
-          <SectionLabel index="04" className="text-ash">
-            Sobre a marca
-          </SectionLabel>
-          <span className="monogram h-16 text-ink sm:h-24" aria-hidden="true" />
+          <h2 id="sobre-title" className="display text-[clamp(4rem,15vw,14rem)]" data-reveal>
+            {brand.signature.replace('.', '')}
+            <span className="text-ash">.</span>
+          </h2>
+          <span className="monogram mt-2 h-16 shrink-0 text-ink sm:h-24" aria-hidden="true" />
         </div>
 
-        <h2 id="sobre-title" className="display mt-10 text-[clamp(4rem,16vw,15rem)]" data-reveal>
-          {brand.signature.replace('.', '')}
-          <span className="text-ash">.</span>
-        </h2>
-
         <div className="mt-16 grid gap-16 lg:mt-24 lg:grid-cols-[1.4fr_1fr] lg:gap-24">
-          <p ref={statementRef} className="editorial text-[clamp(2rem,4.4vw,4rem)] leading-[1.05]">
+          <p ref={statementRef} className="editorial text-[clamp(1.875rem,4vw,3.5rem)] leading-[1.08]">
             <span className="sr-only">{brand.statement}</span>
             <span aria-hidden="true">
               {brand.statement.split(' ').map((w, i) => (
@@ -65,16 +60,16 @@ export function About() {
               ))}
             </dl>
             <p className="label text-ash" data-reveal>
-              Fonte: descrições oficiais do catálogo Vista Morro.
+              Dados das descrições oficiais das peças.
             </p>
           </div>
         </div>
 
-        <figure className="mt-24 border-t border-line-ink pt-10 sm:mt-36" data-reveal>
+        <figure className="mt-16 border-t border-line-ink pt-10 sm:mt-36" data-reveal>
           <blockquote className="display text-[clamp(2.75rem,9vw,8.5rem)]">
             “{brand.printQuote.text}”
           </blockquote>
-          <figcaption className="label mt-6 text-ash">— {brand.printQuote.source}</figcaption>
+          <figcaption className="label mt-6 text-ash">{brand.printQuote.source}</figcaption>
         </figure>
       </div>
     </section>

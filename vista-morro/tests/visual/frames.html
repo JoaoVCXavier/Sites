@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QA · larguras</title>
+    <!--
+      Ferramenta de QA (não entra no build): abra com o servidor de desenvolvimento em
+      http://127.0.0.1:5173/tests/visual/frames.html?set=phones#vitrine
+      Conjuntos: phones (320–464), tablets (768, 1024), wide (1440, 1920), landscape (celulares deitados).
+      Mesma origem do site → os iframes podem ser controlados por script em testes manuais.
+    -->
+    <style>
+      body { margin: 0; padding: 16px; background: #222; color: #ddd; font: 12px/1.4 system-ui, sans-serif; }
+      .row { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+      figure { margin: 0; }
+      figcaption { margin-bottom: 4px; }
+      iframe { border: 0; background: #080808; display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="row" id="row"></div>
+    <script type="module">
+      const sets = {
+        phones: [[320, 700], [375, 760], [390, 780], [430, 800], [464, 800]],
+        tablets: [[768, 1000], [1024, 760]],
+        wide: [[1440, 900], [1920, 1000]],
+        landscape: [[667, 375], [844, 390], [932, 430]],
+      }
+      const params = new URLSearchParams(location.search)
+      const set = sets[params.get('set') ?? 'phones'] ?? sets.phones
+      const path = params.get('path') ?? '/'
+      const row = document.getElementById('row')
+      for (const [w, h] of set) {
+        const fig = document.createElement('figure')
+        fig.innerHTML = `<figcaption>${w} × ${h}</figcaption>`
+        const f = document.createElement('iframe')
+        f.width = w
+        f.height = h
+        f.title = `${w}px`
+        f.src = `${path}${location.hash}`
+        fig.append(f)
+        row.append(fig)
+      }
+    </script>
+  </body>
+</html>

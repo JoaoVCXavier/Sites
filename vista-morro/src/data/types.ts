@@ -1,19 +1,40 @@
 /**
- * Modelo de dados da vitrine. Pensado para servir também a um e-commerce futuro:
- * `CatalogProduct` espelha um SKU do catálogo; `Model` agrupa as versões (regular / Plus Size)
- * de um mesmo desenho. Nenhum campo comercial (preço, estoque) é exibido nesta fase.
+ * Modelo de dados da loja. `CatalogProduct` espelha um SKU do catálogo oficial;
+ * `Model` agrupa as versões (Regular / Plus Size) de um mesmo desenho.
  */
+
+/** Medidas da peça na foto, em frações da imagem recortada (geradas por scripts/sync-catalog.mjs). */
+export interface GarmentAnchor {
+  /** centro horizontal da gola */
+  neckX: number
+  /** topo da gola (ponto mais alto da peça) */
+  neckY: number
+  /** largura da faixa da gola */
+  neckW: number
+  /** extremidades da linha dos ombros */
+  shoulderL: number
+  shoulderR: number
+  shoulderY: number
+}
+
 export interface ProductImage {
   id: string
   width: number
   height: number
   srcset: Record<string, string>
+  /** tom predominante da peça na foto (luminância dos pixels opacos) */
+  tone: 'dark' | 'light'
+  anchor: GarmentAnchor
 }
 
 export interface CatalogProduct {
   id: string
   title: string
   available: boolean
+  /** preço publicado em centavos; null = sem preço publicado ("Consulte o valor") */
+  priceCents: number | null
+  /** preço anterior publicado ("de"), em centavos */
+  compareAtCents: number | null
   category: string | null
   intro: string
   specs: Partial<Record<'Modelagem' | 'Composição' | 'Malha' | 'Gramatura' | 'Fio', string>>
@@ -39,6 +60,8 @@ export interface CatalogSnapshot {
 }
 
 export type Tone = 'ink' | 'paper' | 'smoke'
+
+export type Version = 'regular' | 'plus'
 
 export interface Model {
   /** slug estável, ex.: "do-morro" */

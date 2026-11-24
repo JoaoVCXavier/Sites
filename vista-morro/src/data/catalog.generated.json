@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-21T11:10:05.298Z",
+  "syncedAt": "2026-11-24T03:20:02.145Z",
   "source": "https://meucatalogo.app/vistamorro",
   "store": {
     "name": "VISTA MORRO",
@@ -21,6 +21,8 @@
       "id": "6afb22614f19ba000835b374",
       "title": "Camiseta VM Angel PLUS SIZE",
       "available": true,
+      "priceCents": 13900,
+      "compareAtCents": 14900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -54,7 +56,17 @@
           "height": 693,
           "srcset": {
             "480": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-480.webp",
-            "960": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-960.webp"
+            "720": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-720.webp",
+            "924": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b376-924.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4924,
+            "neckY": 0.0043,
+            "neckW": 0.1797,
+            "shoulderL": 0.1645,
+            "shoulderR": 0.8214,
+            "shoulderY": 0.1429
           }
         },
         {
@@ -63,7 +75,17 @@
           "height": 694,
           "srcset": {
             "480": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-480.webp",
-            "960": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-960.webp"
+            "720": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-720.webp",
+            "924": "catalog/6afb22614f19ba000835b374/6afb22614f19ba000835b377-924.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4946,
+            "neckY": 0.0029,
+            "neckW": 0.1818,
+            "shoulderL": 0.1699,
+            "shoulderR": 0.8171,
+            "shoulderY": 0.1412
           }
         }
       ],
@@ -73,6 +95,8 @@
       "id": "6afb221f4f19ba000835b36b",
       "title": "Camiseta VM Angel",
       "available": true,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -107,7 +131,17 @@
           "height": 693,
           "srcset": {
             "480": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-480.webp",
-            "960": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-960.webp"
+            "720": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-720.webp",
+            "924": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36d-924.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4924,
+            "neckY": 0.0043,
+            "neckW": 0.1797,
+            "shoulderL": 0.1645,
+            "shoulderR": 0.8214,
+            "shoulderY": 0.1429
           }
         },
         {
@@ -116,7 +150,17 @@
           "height": 694,
           "srcset": {
             "480": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-480.webp",
-            "960": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-960.webp"
+            "720": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-720.webp",
+            "924": "catalog/6afb221f4f19ba000835b36b/6afb221f4f19ba000835b36e-924.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4946,
+            "neckY": 0.0029,
+            "neckW": 0.1818,
+            "shoulderL": 0.1699,
+            "shoulderR": 0.8171,
+            "shoulderY": 0.1412
           }
         }
       ],
@@ -126,6 +170,8 @@
       "id": "6afb043c4f19ba000835ac2d",
       "title": "Camiseta VM Signature PLUS SIZE",
       "available": true,
+      "priceCents": 13900,
+      "compareAtCents": 14900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -158,7 +204,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-480.webp",
-            "960": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-960.webp"
+            "720": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-720.webp",
+            "970": "catalog/6afb043c4f19ba000835ac2d/6afb04f94f19ba000835ac4f-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         }
       ],
@@ -168,6 +224,8 @@
       "id": "6ae1490c4f19ba000733a516",
       "title": "Camiseta VM Signature",
       "available": true,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -202,7 +260,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-480.webp",
-            "960": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-960.webp"
+            "720": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-720.webp",
+            "970": "catalog/6ae1490c4f19ba000733a516/6ae1490c4f19ba000733a518-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         }
       ],
@@ -212,6 +280,8 @@
       "id": "6ae148c54f19ba000733a509",
       "title": "Camiseta VM Money Run PLUS SIZE",
       "available": true,
+      "priceCents": 13900,
+      "compareAtCents": 14900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -245,7 +315,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-480.webp",
-            "960": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-960.webp"
+            "720": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-720.webp",
+            "974": "catalog/6ae148c54f19ba000733a509/6ae148c54f19ba000733a50b-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -255,6 +335,8 @@
       "id": "6ae148864f19ba000733a4fe",
       "title": "Camiseta VM Money Run",
       "available": true,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -289,7 +371,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-480.webp",
-            "960": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-960.webp"
+            "720": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-720.webp",
+            "974": "catalog/6ae148864f19ba000733a4fe/6ae148864f19ba000733a500-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -299,6 +391,8 @@
       "id": "6adfe8be4f19ba00073371d2",
       "title": "Camiseta VM Stamp PLUS SIZE",
       "available": true,
+      "priceCents": 11900,
+      "compareAtCents": 13900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -333,7 +427,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-480.webp",
-            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-960.webp"
+            "720": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-720.webp",
+            "970": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d4-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -342,7 +446,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-480.webp",
-            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-960.webp"
+            "720": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-720.webp",
+            "950": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d5-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -351,7 +465,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-480.webp",
-            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-960.webp"
+            "720": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-720.webp",
+            "974": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d6-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -360,7 +484,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-480.webp",
-            "960": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-960.webp"
+            "720": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-720.webp",
+            "968": "catalog/6adfe8be4f19ba00073371d2/6adfe8be4f19ba00073371d7-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         }
       ],
@@ -370,6 +504,8 @@
       "id": "6adfe87b4f19ba00073371c3",
       "title": "Camiseta VM Stamp",
       "available": true,
+      "priceCents": 10900,
+      "compareAtCents": 12900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -405,7 +541,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-480.webp",
-            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-960.webp"
+            "720": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-720.webp",
+            "970": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c5-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -414,7 +560,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-480.webp",
-            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-960.webp"
+            "720": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-720.webp",
+            "950": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c6-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -423,7 +579,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-480.webp",
-            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-960.webp"
+            "720": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-720.webp",
+            "974": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c7-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -432,7 +598,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-480.webp",
-            "960": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-960.webp"
+            "720": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-720.webp",
+            "968": "catalog/6adfe87b4f19ba00073371c3/6adfe87b4f19ba00073371c8-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         }
       ],
@@ -442,6 +618,8 @@
       "id": "6adfe80d4f19ba00073371b2",
       "title": "Camiseta VM Riqueza PLUS SIZE",
       "available": true,
+      "priceCents": 11900,
+      "compareAtCents": 13900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -475,7 +653,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-480.webp",
-            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-960.webp"
+            "720": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-720.webp",
+            "970": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b4-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -484,7 +672,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-480.webp",
-            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-960.webp"
+            "720": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-720.webp",
+            "950": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b5-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -493,7 +691,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-480.webp",
-            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-960.webp"
+            "720": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-720.webp",
+            "974": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b6-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -502,7 +710,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-480.webp",
-            "960": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-960.webp"
+            "720": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-720.webp",
+            "968": "catalog/6adfe80d4f19ba00073371b2/6adfe80d4f19ba00073371b7-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         }
       ],
@@ -512,6 +730,8 @@
       "id": "6adfe7b74f19ba0007337192",
       "title": "Camiseta VM Riqueza",
       "available": true,
+      "priceCents": 10900,
+      "compareAtCents": 12900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -547,7 +767,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-480.webp",
-            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-960.webp"
+            "720": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-720.webp",
+            "970": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337194-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -556,7 +786,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-480.webp",
-            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-960.webp"
+            "720": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-720.webp",
+            "950": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337195-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -565,7 +805,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-480.webp",
-            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-960.webp"
+            "720": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-720.webp",
+            "974": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337196-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -574,7 +824,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-480.webp",
-            "960": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-960.webp"
+            "720": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-720.webp",
+            "968": "catalog/6adfe7b74f19ba0007337192/6adfe7b74f19ba0007337197-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         }
       ],
@@ -584,6 +844,8 @@
       "id": "6adfe7434f19ba000733716c",
       "title": "Camiseta VM Do Morro PLUS SIZE",
       "available": true,
+      "priceCents": 13900,
+      "compareAtCents": 14900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -617,7 +879,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-720.webp",
+            "970": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716e-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -626,7 +898,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-720.webp",
+            "970": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba000733716f-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -635,7 +917,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-720.webp",
+            "970": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337170-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -644,7 +936,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-720.webp",
+            "974": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337171-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -653,7 +955,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-720.webp",
+            "974": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337172-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -662,7 +974,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-480.webp",
-            "960": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-960.webp"
+            "720": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-720.webp",
+            "974": "catalog/6adfe7434f19ba000733716c/6adfe7434f19ba0007337173-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -672,6 +994,8 @@
       "id": "6adf8df54f19ba00073360df",
       "title": "Camiseta VM Authentic",
       "available": false,
+      "priceCents": 11900,
+      "compareAtCents": 12900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -707,7 +1031,17 @@
           "height": 764,
           "srcset": {
             "480": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-480.webp",
-            "960": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-960.webp"
+            "720": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-720.webp",
+            "966": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e1-966.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4995,
+            "neckY": 0.0013,
+            "neckW": 0.1791,
+            "shoulderL": 0.234,
+            "shoulderR": 0.7692,
+            "shoulderY": 0.1374
           }
         },
         {
@@ -716,7 +1050,17 @@
           "height": 764,
           "srcset": {
             "480": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-480.webp",
-            "960": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-960.webp"
+            "720": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-720.webp",
+            "966": "catalog/6adf8df54f19ba00073360df/6adf8df54f19ba00073360e2-966.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4995,
+            "neckY": 0.0013,
+            "neckW": 0.1791,
+            "shoulderL": 0.234,
+            "shoulderR": 0.7692,
+            "shoulderY": 0.1374
           }
         }
       ],
@@ -726,6 +1070,8 @@
       "id": "6a88fa154f19ba0008b0fa11",
       "title": "Camiseta VM Authentic PLUS SIZE",
       "available": false,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Lançamentos",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -758,7 +1104,17 @@
           "height": 764,
           "srcset": {
             "480": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-480.webp",
-            "960": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-960.webp"
+            "720": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-720.webp",
+            "966": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614a-966.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4995,
+            "neckY": 0.0013,
+            "neckW": 0.1791,
+            "shoulderL": 0.234,
+            "shoulderR": 0.7692,
+            "shoulderY": 0.1374
           }
         },
         {
@@ -767,7 +1123,17 @@
           "height": 764,
           "srcset": {
             "480": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-480.webp",
-            "960": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-960.webp"
+            "720": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-720.webp",
+            "966": "catalog/6a88fa154f19ba0008b0fa11/6adf8ee74f19ba000733614b-966.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4995,
+            "neckY": 0.0013,
+            "neckW": 0.1791,
+            "shoulderL": 0.234,
+            "shoulderR": 0.7692,
+            "shoulderY": 0.1374
           }
         }
       ],
@@ -777,6 +1143,8 @@
       "id": "6a88f5e04f19ba0008b0f9a7",
       "title": "Camiseta VM Kiss me",
       "available": true,
+      "priceCents": 11900,
+      "compareAtCents": 12900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -812,7 +1180,17 @@
           "height": 696,
           "srcset": {
             "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-480.webp",
-            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-960.webp"
+            "720": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-720.webp",
+            "897": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e90-897.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4961,
+            "neckY": 0.0014,
+            "neckW": 0.1583,
+            "shoulderL": 0.1616,
+            "shoulderR": 0.8294,
+            "shoulderY": 0.1408
           }
         },
         {
@@ -821,7 +1199,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-480.webp",
-            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-960.webp"
+            "720": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-720.webp",
+            "970": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e91-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -830,7 +1218,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-480.webp",
-            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-960.webp"
+            "720": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-720.webp",
+            "968": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e92-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         },
         {
@@ -839,7 +1237,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-480.webp",
-            "960": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-960.webp"
+            "720": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-720.webp",
+            "974": "catalog/6a88f5e04f19ba0008b0f9a7/6adfd9ae4f19ba0007336e93-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -849,6 +1257,8 @@
       "id": "69d867894f19ba0008dff478",
       "title": "Camiseta VM Kiss Me PLUS SIZE",
       "available": true,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -882,7 +1292,17 @@
           "height": 696,
           "srcset": {
             "480": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-480.webp",
-            "960": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-960.webp"
+            "720": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-720.webp",
+            "897": "catalog/69d867894f19ba0008dff478/6adfdc3a4f19ba0007336ed6-897.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4961,
+            "neckY": 0.0014,
+            "neckW": 0.1583,
+            "shoulderL": 0.1616,
+            "shoulderR": 0.8294,
+            "shoulderY": 0.1408
           }
         },
         {
@@ -891,7 +1311,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-480.webp",
-            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-960.webp"
+            "720": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-720.webp",
+            "970": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336ee9-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -900,7 +1330,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-480.webp",
-            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-960.webp"
+            "720": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-720.webp",
+            "968": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eea-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         },
         {
@@ -909,7 +1349,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-480.webp",
-            "960": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-960.webp"
+            "720": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-720.webp",
+            "974": "catalog/69d867894f19ba0008dff478/6adfdc4c4f19ba0007336eeb-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -919,6 +1369,8 @@
       "id": "69d867394f19ba0008dff469",
       "title": "Camiseta VM Urban",
       "available": true,
+      "priceCents": 10900,
+      "compareAtCents": 11900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -952,7 +1404,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-480.webp",
-            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-960.webp"
+            "720": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-720.webp",
+            "950": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f5-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -961,7 +1423,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-480.webp",
-            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-960.webp"
+            "720": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-720.webp",
+            "970": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f6-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -970,7 +1442,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-480.webp",
-            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-960.webp"
+            "720": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-720.webp",
+            "968": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f7-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         },
         {
@@ -979,7 +1461,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-480.webp",
-            "960": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-960.webp"
+            "720": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-720.webp",
+            "974": "catalog/69d867394f19ba0008dff469/6adfe5b94f19ba00073370f8-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -989,6 +1481,8 @@
       "id": "69d8462a4f19ba0008dfeeaf",
       "title": "Camiseta VM Urban PLUS SIZE",
       "available": true,
+      "priceCents": 11900,
+      "compareAtCents": 12900,
       "category": "Camisetas",
       "intro": "Nossas camisetas unem estilo e autenticidade para quem veste sua própria identidade, sem seguir padrões.",
       "specs": {
@@ -1022,7 +1516,17 @@
           "height": 737,
           "srcset": {
             "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-480.webp",
-            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-960.webp"
+            "720": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-720.webp",
+            "950": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711c-950.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4968,
+            "neckY": 0.0014,
+            "neckW": 0.1558,
+            "shoulderL": 0.1621,
+            "shoulderR": 0.8295,
+            "shoulderY": 0.1411
           }
         },
         {
@@ -1031,7 +1535,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-480.webp",
-            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-960.webp"
+            "720": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-720.webp",
+            "970": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711d-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -1040,7 +1554,17 @@
           "height": 742,
           "srcset": {
             "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-480.webp",
-            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-960.webp"
+            "720": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-720.webp",
+            "968": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711e-968.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5046,
+            "neckY": 0.004,
+            "neckW": 0.1663,
+            "shoulderL": 0.1684,
+            "shoulderR": 0.8223,
+            "shoulderY": 0.1415
           }
         },
         {
@@ -1049,7 +1573,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-480.webp",
-            "960": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-960.webp"
+            "720": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-720.webp",
+            "974": "catalog/69d8462a4f19ba0008dfeeaf/6adfe6374f19ba000733711f-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],
@@ -1059,6 +1593,8 @@
       "id": "69d845c24f19ba0008dfee99",
       "title": "Camiseta VM Do Morro",
       "available": true,
+      "priceCents": 12900,
+      "compareAtCents": 13900,
       "category": "Camisetas",
       "intro": "",
       "specs": {},
@@ -1087,7 +1623,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-720.webp",
+            "970": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337132-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -1096,7 +1642,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-720.webp",
+            "970": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337133-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -1105,7 +1661,17 @@
           "height": 739,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-720.webp",
+            "970": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337134-970.webp"
+          },
+          "tone": "dark",
+          "anchor": {
+            "neckX": 0.4979,
+            "neckY": 0,
+            "neckW": 0.1567,
+            "shoulderL": 0.1649,
+            "shoulderR": 0.8299,
+            "shoulderY": 0.1394
           }
         },
         {
@@ -1114,7 +1680,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-720.webp",
+            "974": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337135-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -1123,7 +1699,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-720.webp",
+            "974": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337136-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         },
         {
@@ -1132,7 +1718,17 @@
           "height": 733,
           "srcset": {
             "480": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-480.webp",
-            "960": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-960.webp"
+            "720": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-720.webp",
+            "974": "catalog/69d845c24f19ba0008dfee99/6adfe6d74f19ba0007337137-974.webp"
+          },
+          "tone": "light",
+          "anchor": {
+            "neckX": 0.5,
+            "neckY": 0.0027,
+            "neckW": 0.2053,
+            "shoulderL": 0.1437,
+            "shoulderR": 0.845,
+            "shoulderY": 0.1419
           }
         }
       ],

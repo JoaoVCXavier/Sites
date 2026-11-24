@@ -24,7 +24,6 @@ export const brand = {
   ],
   links: {
     instagram: { href: 'https://www.instagram.com/vistamorro/', handle: '@vistamorro' },
-    catalog: { href: catalog.source, label: 'meucatalogo.app/vistamorro' },
     whatsapp: catalog.store.whatsapp
       ? {
           href: `https://wa.me/${catalog.store.whatsapp}`,
