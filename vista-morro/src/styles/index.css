@@ -1,0 +1,211 @@
+/*
+ * Tipografia (OFL, self-hosted, font-display: swap):
+ * - Bricolage Grotesque: voz da marca. Pesada e condensada nos títulos (cartaz de rua, ink traps),
+ *   larga e média nas frases da marca.
+ * - Instrument Sans: menus, preços, tamanhos, textos e botões.
+ */
+@import '@fontsource-variable/bricolage-grotesque/standard.css';
+@import '@fontsource-variable/instrument-sans/wdth.css';
+@import 'tailwindcss';
+
+/* celular deitado: pouca altura útil, a composição precisa caber numa tela */
+@custom-variant short (@media (orientation: landscape) and (max-height: 520px));
+
+/*
+ * Vista Morro — tokens
+ * Preto da marca (#000 no catálogo) suavizado para #080808 em tela;
+ * off-white amostrado das camisetas "Off white" da própria marca.
+ */
+@theme {
+  --color-ink: #080808;
+  --color-ink-2: #111110;
+  --color-ink-3: #1a1a19;
+  --color-paper: #f4f3f0;
+  --color-paper-2: #e9e7e1;
+  --color-smoke: #a8a7a3;
+  --color-ash: #5c5b58;
+  --color-line: rgb(244 243 240 / 0.14);
+  --color-line-ink: rgb(8 8 8 / 0.14);
+
+  --font-display: 'Bricolage Grotesque Variable', 'Arial Narrow', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans Variable', system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --breakpoint-xs: 420px;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    font-size: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    scrollbar-color: var(--color-ash) var(--color-ink);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  /* Anel de foco em dois tons: faixa clara + contorno escuro — visível em qualquer fundo. */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-paper);
+  }
+
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+  dialog {
+    color: inherit;
+  }
+
+  dialog::backdrop {
+    background: transparent;
+  }
+
+  /* Botões e links pressionáveis respondem ao toque (feedback imediato, sem atraso). */
+  button:not(:disabled),
+  a {
+    transition-property: transform, color, background-color, border-color, opacity;
+    transition-duration: 160ms;
+    transition-timing-function: var(--ease-out);
+  }
+}
+
+@layer components {
+  /* Título de impacto: Bricolage condensada, peso máximo, tamanho óptico de cartaz. */
+  .display {
+    font-family: var(--font-display);
+    font-stretch: 75%;
+    font-weight: 800;
+    /* eixos explícitos: o WebKit não deriva wdth/wght de font-stretch/font-weight em todas as versões */
+    font-variation-settings: 'wdth' 75, 'wght' 800, 'opsz' 96;
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Voz da marca: frases e textos de apoio grandes. */
+  .editorial {
+    font-family: var(--font-display);
+    font-stretch: 100%;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-variation-settings: 'wdth' 100, 'wght' 500;
+    letter-spacing: -0.022em;
+    line-height: 1.08;
+  }
+
+  /* Rótulos curtos (menus, botões, metadados). */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 100, 'wght' 600;
+    line-height: 1.35;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums lining-nums;
+    font-weight: 600;
+    font-variation-settings: 'wdth' 100, 'wght' 600;
+    letter-spacing: -0.005em;
+  }
+
+  .press:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  /* Monograma oficial usado como máscara — herda a cor do texto. */
+  .monogram {
+    display: inline-block;
+    background-color: currentColor;
+    -webkit-mask: url('/brand/vm-monogram.webp') center / contain no-repeat;
+    mask: url('/brand/vm-monogram.webp') center / contain no-repeat;
+    aspect-ratio: 594 / 673;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s var(--ease-out-expo);
+  }
+
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+  }
+
+  .grain {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes vm-sway {
+  0%,
+  100% {
+    transform: rotate(-0.6deg);
+  }
+  50% {
+    transform: rotate(0.6deg);
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
